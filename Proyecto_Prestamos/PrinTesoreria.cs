@@ -1,14 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace Proyecto_Prestamos
 {
-
-	public partial class PrincipalEmpleado : Form
+	public partial class PrinTesoreria : Form
 	{
-		public PrincipalEmpleado()
+		public PrinTesoreria()
 		{
 			InitializeComponent();
 			
@@ -19,8 +17,7 @@ namespace Proyecto_Prestamos
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
-			VentanaSolicitud solitud= new VentanaSolicitud();
-			solitud.Show();
+	
 		}
 	}
 }

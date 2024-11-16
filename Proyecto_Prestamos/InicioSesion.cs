@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,15 +6,8 @@ namespace Proyecto_Prestamos
 {
 	public partial class VentanaInicio : Form
 	{
-		Conexion cone;
-		EmpleadoDao empleadoDao;
-		Empleado empleado;
-        UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
-
-        public VentanaInicio(Conexion con)
+		public VentanaInicio()
 		{
-			cone = con;
-			this.empleadoDao= new EmpleadoDao(cone);
 			InitializeComponent();
 			
 		}
@@ -33,31 +25,8 @@ namespace Proyecto_Prestamos
 		}
 		void IngresarClick(object sender, EventArgs e)
 		{
-			string loginA, claveA;
-			loginA = idUsuario.Text;
-			claveA= contrasenia.Text;
-
-			bool login = empleadoDao.login(loginA, claveA);
-			if (login)
-			{
-                empleado = empleadoDao.hallarEmpleadoPorCuenta(loginA);
-                UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
-                usuario.establecerUsuario(empleado);
-                PrincipalEmpleado principalEmpl = new PrincipalEmpleado(cone);
-				principalEmpl.Show();
-				MessageBox.Show("Usuario si encontrado");
-            }
-            else
-			{
-				MessageBox.Show("Usuario no encontrado");
-				idUsuario.Clear();
-				contrasenia.Clear();
-			}
+			PrincipalEmpleado principalEmpl= new PrincipalEmpleado();
+			principalEmpl.Show();
 		}
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
+	}
 }

@@ -1,8 +1,8 @@
 ﻿/*
  * Created by SharpDevelop.
  * User: ANAMARIA
- * Date: 28/10/2024
- * Time: 8:36 p. m.
+ * Date: 27/09/2024
+ * Time: 3:26 p. m.
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
@@ -13,11 +13,11 @@ using System.Windows.Forms;
 namespace Proyecto_Prestamos
 {
 	/// <summary>
-	/// Description of CRUDSucursal.
+	/// Description of PrincipalAdministrador.
 	/// </summary>
-	public partial class CRUDSucursal : Form
+	public partial class PrincipalAdministrador : Form
 	{
-		public CRUDSucursal()
+		public PrincipalAdministrador()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
@@ -27,18 +27,6 @@ namespace Proyecto_Prestamos
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
-		}
-		void Panel1Paint(object sender, PaintEventArgs e)
-		{
-	
-		}
-		void Label1Click(object sender, EventArgs e)
-		{
-	
-		}
-		void Label2Click(object sender, EventArgs e)
-		{
-	
 		}
 	}
 }

@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
+
 
 namespace Proyecto_Prestamos
 {
@@ -7,7 +12,7 @@ namespace Proyecto_Prestamos
     {
         private FormEmpleado fe; // Formulario para gestionar empleados
         private Conexion conecte; // Objeto de conexión a la base de datos
-
+        
         // Método para obtener la conexión a la base de datos
         public Conexion getConecte()
         {
@@ -32,15 +37,9 @@ namespace Proyecto_Prestamos
         // Método para salir de la aplicación y cerrar la conexión
         void SalirToolStripMenuItemClick(object sender, EventArgs e)
         {
-            // Cerrar la conexión antes de cerrar la aplicación
-            if (conecte != null && conecte.getCon().State == System.Data.ConnectionState.Open)
-            {
-                conecte.getCon().Close(); // Cierra la conexión si está abierta
-            }
-
+            conecte.getCon().Close(); // Cierra la conexión
             MessageBox.Show("Cerrando la aplicación...");
             Application.Exit(); // Cierra la aplicación
         }
     }
 }
-

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace Proyecto_Prestamos
@@ -8,64 +7,35 @@ namespace Proyecto_Prestamos
     public class EmpleadoDao
     {
         private MainForm mfo;
-        Conexion cone;
-
-        public EmpleadoDao(Conexion cone)
-        {
-            this.cone = cone;
-        }
+        private FormEmpleado formEmpleado;
 
         public EmpleadoDao(MainForm mfo)
         {
             this.mfo = mfo;
         }
 
-        public bool login(string nombreUsuario, string contraseña)
+        public EmpleadoDao(FormEmpleado formEmpleado)
         {
-            bool flag = false;
-            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = @nombreUsuario AND contraseña = @contraseña";
-            try
-            {
-                using (SqlConnection con = cone.getCon())
-                {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand(consulta, con))
-                    {
-                        cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
-                        cmd.Parameters.AddWithValue("@contraseña", contraseña);
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                            {
-                                flag = true;
-                            }
-                        }
-                    }
-                    con.Close();
-                }
-               
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al iniciar sesión: " + ex.Message, "Error");
-            }
-            return flag;
+            this.formEmpleado = formEmpleado;
         }
-
-
-
 
         public void agregar(Empleado emp)
         {
             try
             {
                 SqlCommand cmd = mfo.getConecte().getCon().CreateCommand();
-                cmd.CommandText = "Insert into Empleado (idEmpleado, nombreEmpleado, cargo, idSucursal, nombreMunicipio, estado) " +
-                    "Values('" + emp.getIdEmpleado() + "','" + emp.getNombreEmpleado() + "','" + emp.getCargo() + "','" + emp.getIdSucursal() + "','" + emp.getNombreMunicipio() + "','" + emp.getEstado() + "')";
-                cmd.Connection = mfo.getConecte().getCon();
+                cmd.CommandText = "Insert into Empleado (idEmpleado, nombreEmpleado, idCargo, idSucursal, idMunicipio) " +
+                 "Values(@idEmpleado, @nombreEmpleado, @idCargo, @idSucursal, @idMunicipio)";
+
+                cmd.Parameters.AddWithValue("@idEmpleado", emp.getIdEmpleado());
+                cmd.Parameters.AddWithValue("@nombreEmpleado", emp.getNombreEmpleado());
+                cmd.Parameters.AddWithValue("@idCargo", emp.getCargo().GetIdCargo());
+                cmd.Parameters.AddWithValue("@idSucursal", emp.getIdSucursal().getIdSucursal());
+                cmd.Parameters.AddWithValue("@idMunicipio", emp.getNombreMunicipio().GetIdMunicipio());
+
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Empleado agregado exitosamente", "Atención!");
+                crearCuentaUsuario(emp.getIdEmpleado());
+                MessageBox.Show("Empleado agregado correctamente.", "Información");
             }
             catch (Exception ex)
             {
@@ -73,10 +43,31 @@ namespace Proyecto_Prestamos
             }
         }
 
+
+        private void crearCuentaUsuario(string idEmpleado)
+        {
+            try
+            {
+                SqlCommand cmd = mfo.getConecte().getCon().CreateCommand();
+                cmd.CommandText = "Insert into Usuario (idUsuario, contraseña) Values(@idUsuario, @contraseña)";
+                cmd.Parameters.AddWithValue("@idUsuario", idEmpleado);
+                cmd.Parameters.AddWithValue("@contraseña", idEmpleado);
+
+                cmd.Connection = mfo.getConecte().getCon();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Empleado agregado correctamente. numero de cuenta y contraseña es: "+idEmpleado, "Información");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al crear cuenta de usuario: " + ex.Message, "Error");
+            }
+        }
+
         public string buscarTodos()
         {
             string empleados = "";
-            string consulta = "select * from Empleado";
+            string consulta = "SELECT * FROM Empleado";
+
             try
             {
                 SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
@@ -86,7 +77,7 @@ namespace Proyecto_Prestamos
                 {
                     while (reader.Read())
                     {
-                        empleados += reader.GetValue(0).ToString() + "   " + reader.GetValue(1).ToString() + "\n";
+                        empleados += $"{reader["idEmpleado"]}   {reader["nombreEmpleado"]}\n";
                     }
                 }
                 reader.Close();
@@ -98,71 +89,34 @@ namespace Proyecto_Prestamos
 
             return empleados;
         }
-        public Empleado hallarEmpleadoPorCuenta(string usuario)
-        {
-            Empleado emp = null;
-            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = @usuario";
-
-            try
-            {
-                using (SqlConnection conexion = cone.getCon()) // Usa la conexión de forma segura
-                {
-                    using (SqlCommand cmd = new SqlCommand(consulta, conexion))
-                    {
-                        cmd.Parameters.AddWithValue("@usuario", usuario);
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read()) // Solo necesitas leer una vez si esperas un único resultado
-                            {
-                                string id = reader.GetString(0); // Usa los métodos de tipo correcto
-                                string nombre = reader.GetString(1);
-                                string cargo = reader.GetString(2);
-                                string idSucursal = reader.GetString(3);
-                                string nombreMunicipio = reader.GetString(4);
-                                string estado = reader.GetString(5);
-
-                                emp = new Empleado(id, nombre, cargo, idSucursal, nombreMunicipio, estado);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al buscar empleado: " + ex.Message, "Error");
-            }
-
-            return emp;
-        }
-
 
         public Empleado buscarEmpleado(string idEmpleado)
         {
             Empleado emp = null;
-            string consulta = "select * from Empleado where idEmpleado = '" + idEmpleado + "' ";
+            string consulta = "SELECT * FROM Empleado WHERE idEmpleado = @idEmpleado";
+
             try
             {
                 SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
+                cmd.Parameters.AddWithValue("@idEmpleado", idEmpleado);
+
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    string id = reader.GetValue(0).ToString();
-                    string nombre = reader.GetValue(1).ToString();
-                    string cargo = reader.GetValue(2).ToString();
-                    string idSucursal = reader.GetValue(3).ToString();
-                    string nombreMunicipio = reader.GetValue(4).ToString();
-                    string estado = reader.GetValue(5).ToString();
+                    string id = reader["idEmpleado"].ToString();
+                    string nombre = reader["nombreEmpleado"].ToString();
+                    string idCargo = reader["idCargo"].ToString();
+                    string idSucursal = reader["idSucursal"].ToString();
+                    string idMunicipio = reader["idMunicipio"].ToString();
 
-                    emp = new Empleado(id, nombre, cargo, idSucursal, nombreMunicipio, estado);
+                    emp = new Empleado(id, nombre, new Cargo(idCargo, null, 0, 0), new Sucursal(idCargo, null, null, null), new Municipio(idMunicipio, null, 0), null);
                 }
                 reader.Close();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Error al buscar empleado: " + ex.Message, "Error");
             }
 
@@ -172,13 +126,18 @@ namespace Proyecto_Prestamos
         public bool editar(Empleado emp)
         {
             bool resultado = false;
-            string consulta = "update Empleado set nombreEmpleado = '" + emp.getNombreEmpleado() + "', cargo = '" + emp.getCargo() + "', " +
-                "idSucursal = '" + emp.getIdSucursal() + "', nombreMunicipio = '" + emp.getNombreMunicipio() + "', estado = '" + emp.getEstado() + "' " +
-                "where idEmpleado = '" + emp.getIdEmpleado() + "'";
+            string consulta = "UPDATE Empleado SET nombreEmpleado = @nombreEmpleado, idCargo = @idCargo, " +
+                              "idSucursal = @idSucursal, idMunicipio = @idMunicipio WHERE idEmpleado = @idEmpleado";
 
             try
             {
                 SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
+                cmd.Parameters.AddWithValue("@idEmpleado", emp.getIdEmpleado());
+                cmd.Parameters.AddWithValue("@nombreEmpleado", emp.getNombreEmpleado());
+                cmd.Parameters.AddWithValue("@idCargo", emp.getCargo().GetIdCargo());
+                cmd.Parameters.AddWithValue("@idSucursal", emp.getIdSucursal());
+                cmd.Parameters.AddWithValue("@idMunicipio", emp.getIdSucursal().getidMunicipio().GetIdMunicipio());
+
                 cmd.ExecuteNonQuery();
                 resultado = true;
             }
@@ -193,11 +152,12 @@ namespace Proyecto_Prestamos
         public bool eliminar(Empleado emp)
         {
             bool resultado = false;
-            string consulta = "Delete from Empleado where idEmpleado = '" + emp.getIdEmpleado() + "'";
+            string consulta = "DELETE FROM Empleado WHERE idEmpleado = @idEmpleado";
 
             try
             {
                 SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
+                cmd.Parameters.AddWithValue("@idEmpleado", emp.getIdEmpleado());
                 cmd.ExecuteNonQuery();
                 resultado = true;
             }

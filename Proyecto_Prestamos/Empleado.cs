@@ -4,23 +4,21 @@ namespace Proyecto_Prestamos
 {
 	public class Empleado
 	{
-		private String idEmpleado, nombreEmpleado, cargo, idSucursal, nombreMunicipio, estado;
-		//Salario derivado
-		public Empleado(String idEmpleado, String nombreEmpleado, String cargo, String idSucursal, String nombreMunicipio,String estado)
+        private String idEmpleado, nombreEmpleado, estado;
+        private Cargo cargo;
+        private Sucursal idSucursal;
+        private Municipio nombreMunicipio;
+		public Empleado(String idEmpleado, String nombreEmpleado, Cargo cargo, Sucursal idSucursal, Municipio nombreMunicipio,String estado)
 		{
 			this.idEmpleado=idEmpleado;
 			this.nombreEmpleado=nombreEmpleado;
 			this.cargo=cargo;
 			this.idSucursal=idSucursal;
-			this.nombreMunicipio=nombreMunicipio;
-			this.estado=estado;
-		}
-        public Empleado()
-        {
-
+			this.nombreMunicipio= nombreMunicipio;
+            this.estado = estado;
         }
-		
-		 public string getIdEmpleado()
+
+        public string getIdEmpleado()
         {
             return idEmpleado;
         }
@@ -40,32 +38,32 @@ namespace Proyecto_Prestamos
             this.nombreEmpleado = nombreEmpleado;
         }
 
-        public string getCargo()
+        public Cargo getCargo()
         {
             return cargo;
         }
 
-        public void setCargo(string cargo)
+        public void setCargo(Cargo cargo)
         {
             this.cargo = cargo;
         }
 
-        public string getIdSucursal()
+        public Sucursal getIdSucursal()
         {
             return idSucursal;
         }
 
-        public void setIdSucursal(string idSucursal)
+        public void setIdSucursal(Sucursal idSucursal)
         {
             this.idSucursal = idSucursal;
         }
 
-        public string getNombreMunicipio()
+        public Municipio getNombreMunicipio()
         {
             return nombreMunicipio;
         }
 
-        public void setNombreMunicipio(string nombreMunicipio)
+        public void setNombreMunicipio(Municipio nombreMunicipio)
         {
             this.nombreMunicipio = nombreMunicipio;
         }
@@ -79,7 +77,8 @@ namespace Proyecto_Prestamos
         {
             this.estado = estado;
         }
-        
+
+       
         public void solicitarPrestamo(float monto, int periodo)
         {
             Console.WriteLine("Solicitud de préstamo realizada por el empleado {0} para un monto de {1} a {2} meses.", nombreEmpleado, monto, periodo);
