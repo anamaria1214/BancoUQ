@@ -63,5 +63,9 @@ namespace Proyecto_Prestamos
         {
             return tasaInteres;
         }
+        public void setId(string id)
+        {
+            this.idSolicitud= id;
+        }
     }
 }

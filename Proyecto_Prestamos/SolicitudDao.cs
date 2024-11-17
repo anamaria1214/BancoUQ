@@ -12,7 +12,7 @@ namespace Proyecto_Prestamos
         private MainForm mfo;
         private CRUDSolicitud solicitudForm;
         private Conexion cone = Conexion.Instancia;
-
+        
         public SolicitudDao()
         {
         }
@@ -68,34 +68,43 @@ namespace Proyecto_Prestamos
             return resultado;
         }
 
-        public Solicitud obtenerSolicitudPorId(String idSolicitud)
+        public Solicitud obtenerSolicitudPorId(string idSolicitud)
         {
             Solicitud solicitud = null;
-            string consulta = "select * from Solicitud where idSolicitud = '" + idSolicitud + "' ";
+            string consulta = "SELECT * FROM SolicitudPrestamo WHERE idSolicitud = @idSolicitud"; // Usa parámetros para evitar inyecciones SQL
             try
             {
                 SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    string id = reader.GetString(0);
-                    decimal monto = reader.GetDecimal(1);
-                    decimal periodoMeses = reader.GetDecimal(2);
-                    decimal tasaInteres = reader.GetDecimal(3);
-                    DateTime fechaSolicitud = reader.GetDateTime(4);
-                    string idEmpleado = reader.GetString(5);
-                    string estado1 = reader.GetString(6);
+                // Usamos un parámetro para evitar la inyección SQL
+                cmd.Parameters.AddWithValue("@idSolicitud", idSolicitud);
 
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                // Asegúrate de mover el cursor al primer registro
+                if (reader.Read())
+                {
+                    string id = reader.GetString(0);  // Suponiendo que el idSolicitud es el primer campo
+                    decimal monto = reader.GetDecimal(1);  // Segundo campo
+                    int periodoMeses = reader.GetInt32(2);  // Tercer campo
+                    decimal tasaInteres = reader.GetDecimal(3);  // Cuarto campo
+                    DateTime fechaSolicitud = reader.GetDateTime(4);  // Quinto campo
+                    string idEmpleado = reader.GetString(5);  // Sexto campo
+                    string estado1 = reader.GetString(6);  // Séptimo campo
+
+                    // Crear el objeto solicitud con los datos obtenidos
                     solicitud = new Solicitud(estado1, idEmpleado, monto, periodoMeses, fechaSolicitud, tasaInteres);
                 }
+
                 reader.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al buscar la solicitud: " + ex.Message, "Error");
             }
+
             return solicitud;
         }
+
 
         public List<Solicitud> obtenerSolicitudesPorEstado(string estado)
         {
@@ -117,6 +126,7 @@ namespace Proyecto_Prestamos
                     string idEstado = reader.GetString(6);
 
                     Solicitud solicitud = new Solicitud(idEstado, idEmpleado, montoPedido, periodoMeses, fechaSolicitud, tasaInteres );
+                    solicitud.setId(idSolicitud);
                     solicitudes.Add(solicitud);
                 }
 
@@ -130,10 +140,74 @@ namespace Proyecto_Prestamos
             return solicitudes;
         }
 
+        public bool aprobarSolicitud(string idSolicitud)
+        {
+            // Consulta SQL: establece idEstado a 2 para la solicitud especificada
+            string consulta = "UPDATE SolicitudPrestamo SET idEstado = 2 WHERE idSolicitud = @idSolicitud";
 
+            try
+            {
+                // Crear el comando SQL
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+                // Agregar el parámetro para el ID
+                cmd.Parameters.AddWithValue("@idSolicitud", idSolicitud);
 
+                // Ejecutar la consulta
+                int filasAfectadas = cmd.ExecuteNonQuery();
 
+                // Verificar si se actualizó correctamente
+                if (filasAfectadas > 0)
+                {
+                    MessageBox.Show("Estado actualizado correctamente", "Éxito");
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró la solicitud con el ID especificado", "Atención");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores
+                MessageBox.Show("Error al actualizar el estado: " + ex.Message, "Error");
+                return false;
+            }
+        }
+        public bool rechazarSolicitud(string idSolicitud)
+        {
+            // Consulta SQL: establece idEstado a 2 para la solicitud especificada
+            string consulta = "UPDATE SolicitudPrestamo SET idEstado = 3 WHERE idSolicitud = @idSolicitud";
 
+            try
+            {
+                // Crear el comando SQL
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+                // Agregar el parámetro para el ID
+                cmd.Parameters.AddWithValue("@idSolicitud", idSolicitud);
+
+                // Ejecutar la consulta
+                int filasAfectadas = cmd.ExecuteNonQuery();
+
+                // Verificar si se actualizó correctamente
+                if (filasAfectadas > 0)
+                {
+                    MessageBox.Show("Estado actualizado correctamente", "Éxito");
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró la solicitud con el ID especificado", "Atención");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores
+                MessageBox.Show("Error al actualizar el estado: " + ex.Message, "Error");
+                return false;
+            }
+        }
     }
 
 
