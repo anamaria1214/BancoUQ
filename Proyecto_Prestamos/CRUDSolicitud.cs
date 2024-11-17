@@ -18,10 +18,9 @@ namespace Proyecto_Prestamos
         Conexion cone;
         public CRUDSolicitud(Conexion cone)
         {
+            InitializeComponent();
             this.cone = cone;
             this.SolicitudDao = new SolicitudDao(cone);
-            InitializeComponent();
-            
         }
 
         private void label1_Click(object sender, EventArgs e)

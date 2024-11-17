@@ -38,7 +38,7 @@ namespace Proyecto_Prestamos
             this.nombreSucursal = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.municipio = new System.Windows.Forms.ComboBox();
+            this.comboBoxMunicipio = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -116,13 +116,13 @@ namespace Proyecto_Prestamos
             this.label5.Text = "Municipio: ";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // municipio
+            // comboBoxMunicipio
             // 
-            this.municipio.FormattingEnabled = true;
-            this.municipio.Location = new System.Drawing.Point(12, 327);
-            this.municipio.Name = "municipio";
-            this.municipio.Size = new System.Drawing.Size(317, 21);
-            this.municipio.TabIndex = 8;
+            this.comboBoxMunicipio.FormattingEnabled = true;
+            this.comboBoxMunicipio.Location = new System.Drawing.Point(12, 327);
+            this.comboBoxMunicipio.Name = "comboBoxMunicipio";
+            this.comboBoxMunicipio.Size = new System.Drawing.Size(317, 21);
+            this.comboBoxMunicipio.TabIndex = 8;
             // 
             // btnAgregar
             // 
@@ -170,7 +170,7 @@ namespace Proyecto_Prestamos
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.municipio);
+            this.Controls.Add(this.comboBoxMunicipio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nombreSucursal);
@@ -203,7 +203,7 @@ namespace Proyecto_Prestamos
         private System.Windows.Forms.TextBox nombreSucursal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox municipio;
+        private System.Windows.Forms.ComboBox comboBoxMunicipio;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;

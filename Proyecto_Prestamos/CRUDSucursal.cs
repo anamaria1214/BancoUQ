@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -65,6 +66,32 @@ namespace Proyecto_Prestamos
         {
             sucursal = new Sucursal(idSucursal.Text, nombreSucursal.Text, direccionSucursal.Text, "1");
             sucursalDao.actualizarSucursal(sucursal);
+        }
+
+        private void CargarMunicipios()
+        {
+            try
+            {
+                using (SqlConnection conn = cone.getCon())
+                {
+                    conn.Open();
+                    string query = "SELECT NombreMunicipio FROM Municipios"; // Cambia el nombre de la tabla según tu diseño
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                comboBoxMunicipio.Items.Add(reader["NombreMunicipio"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error cargando municipios: {ex.Message}", "Error");
+            }
         }
     }
     

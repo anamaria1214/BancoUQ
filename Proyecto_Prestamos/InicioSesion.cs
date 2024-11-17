@@ -14,7 +14,7 @@ namespace Proyecto_Prestamos
 
         public VentanaInicio(Conexion con)
 		{
-			cone = con;
+			this.cone = con;
 			this.empleadoDao= new EmpleadoDao(cone);
 			InitializeComponent();
 			

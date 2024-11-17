@@ -17,15 +17,6 @@ namespace Proyecto_Prestamos
         {
             this.cone = cone;
         }
-        public SolicitudDao(MainForm mfo)
-        {
-            this.mfo = mfo;
-        }
-        public SolicitudDao(CRUDSolicitud solicitudForm)
-        {
-            this.solicitudForm = solicitudForm;
-        }
-
 
         public bool agregarSolicitud(Solicitud solicitud)
         {

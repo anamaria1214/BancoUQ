@@ -34,7 +34,7 @@ namespace Proyecto_Prestamos
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
-			CRUDSolicitud solitud= new CRUDSolicitud(cone);
+			CRUDSolicitud solitud= new CRUDSolicitud(this.cone);
 			solitud.Show();
 		}
 
