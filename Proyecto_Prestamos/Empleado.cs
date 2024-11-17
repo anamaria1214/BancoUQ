@@ -1,19 +1,19 @@
 ﻿using System;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Proyecto_Prestamos
 {
 	public class Empleado
 	{
-		private String idEmpleado, nombreEmpleado, cargo, idSucursal, nombreMunicipio, estado;
-		//Salario derivado
-		public Empleado(String idEmpleado, String nombreEmpleado, String cargo, String idSucursal, String nombreMunicipio,String estado)
+		private String idEmpleado, nombreEmpleado, cargo, idSucursal;
+        private DateTime fechaNaci;
+        //Salario derivado
+		public Empleado(String idEmpleado, String nombreEmpleado, DateTime fechaNaci,String idSucursal, String cargo)
 		{
 			this.idEmpleado=idEmpleado;
 			this.nombreEmpleado=nombreEmpleado;
 			this.cargo=cargo;
 			this.idSucursal=idSucursal;
-			this.nombreMunicipio=nombreMunicipio;
-			this.estado=estado;
 		}
         public Empleado()
         {
@@ -60,25 +60,7 @@ namespace Proyecto_Prestamos
             this.idSucursal = idSucursal;
         }
 
-        public string getNombreMunicipio()
-        {
-            return nombreMunicipio;
-        }
-
-        public void setNombreMunicipio(string nombreMunicipio)
-        {
-            this.nombreMunicipio = nombreMunicipio;
-        }
-
-        public string getEstado()
-        {
-            return estado;
-        }
-
-        public void setEstado(string estado)
-        {
-            this.estado = estado;
-        }
+        
         
         public void solicitarPrestamo(float monto, int periodo)
         {

@@ -45,6 +45,7 @@ namespace Proyecto_Prestamos
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@ namespace Proyecto_Prestamos
             this.tasaInteres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -112,6 +112,17 @@ namespace Proyecto_Prestamos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(190, 254);
             this.panel2.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(20, 203);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(148, 30);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Cerrar Sesión";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
@@ -181,16 +192,6 @@ namespace Proyecto_Prestamos
             // 
             this.valorCuota.HeaderText = "Cuota";
             this.valorCuota.Name = "valorCuota";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(20, 203);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 30);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Cerrar Sesión";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // PrincipalEmpleado
             // 

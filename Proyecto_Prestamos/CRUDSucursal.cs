@@ -15,6 +15,7 @@ namespace Proyecto_Prestamos
         Conexion cone;
         Sucursal sucursal;
         SucursalDao sucursalDao;
+
         public CRUDSucursal(Conexion cone)
         {
             InitializeComponent();

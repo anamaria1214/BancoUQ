@@ -17,6 +17,14 @@ namespace Proyecto_Prestamos
         {
             this.cone = cone;
         }
+        public SolicitudDao(MainForm mfo)
+        {
+            this.mfo = mfo;
+        }
+        public SolicitudDao(CRUDSolicitud solicitudForm)
+        {
+            this.solicitudForm = solicitudForm;
+        }
 
 
         public bool agregarSolicitud(Solicitud solicitud)
@@ -30,6 +38,7 @@ namespace Proyecto_Prestamos
                     "','"+solicitud.GetEstado()+")";
 
                 SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Solicitud agregada exitosamente", "Atención!");

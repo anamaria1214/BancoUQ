@@ -23,28 +23,18 @@ namespace Proyecto_Prestamos
         public bool login(string nombreUsuario, string contraseña)
         {
             bool flag = false;
-            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = @nombreUsuario AND contraseña = @contraseña";
+            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = "+nombreUsuario+" AND contraseña = "+contraseña;
             try
             {
-                using (SqlConnection con = cone.getCon())
-                {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand(consulta, con))
-                    {
-                        cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
-                        cmd.Parameters.AddWithValue("@contraseña", contraseña);
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+                SqlDataReader reader = cmd.ExecuteReader();
 
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                            {
-                                flag = true;
-                            }
-                        }
-                    }
-                    con.Close();
+                if (reader.HasRows)
+                {
+                    flag = true;
                 }
-               
+                reader.Close();
+
             }
             catch (Exception ex)
             {
@@ -56,7 +46,7 @@ namespace Proyecto_Prestamos
 
 
 
-        public void agregar(Empleado emp)
+        /*public void agregar(Empleado emp)
         {
             try
             {
@@ -71,7 +61,7 @@ namespace Proyecto_Prestamos
             {
                 MessageBox.Show("Error al agregar empleado: " + ex.Message, "Error");
             }
-        }
+        }*/
 
         public string buscarTodos()
         {
@@ -101,32 +91,24 @@ namespace Proyecto_Prestamos
         public Empleado hallarEmpleadoPorCuenta(string usuario)
         {
             Empleado emp = null;
-            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = @usuario";
+            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = "+usuario;
 
             try
             {
-                using (SqlConnection conexion = cone.getCon()) // Usa la conexión de forma segura
+                SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read()) // Solo necesitas leer una vez si esperas un único resultado
                 {
-                    using (SqlCommand cmd = new SqlCommand(consulta, conexion))
-                    {
-                        cmd.Parameters.AddWithValue("@usuario", usuario);
+                    string id = reader.GetString(0); // Usa los métodos de tipo correcto
+                    string nombre = reader.GetString(1);
+                    DateTime fechaNacimiento= reader.GetDateTime(2);
+                    string idSucursal= reader.GetString(3);
+                    string idCargo= reader.GetString(4);
 
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read()) // Solo necesitas leer una vez si esperas un único resultado
-                            {
-                                string id = reader.GetString(0); // Usa los métodos de tipo correcto
-                                string nombre = reader.GetString(1);
-                                string cargo = reader.GetString(2);
-                                string idSucursal = reader.GetString(3);
-                                string nombreMunicipio = reader.GetString(4);
-                                string estado = reader.GetString(5);
-
-                                emp = new Empleado(id, nombre, cargo, idSucursal, nombreMunicipio, estado);
-                            }
-                        }
-                    }
+                    emp = new Empleado(id, nombre, fechaNacimiento, idSucursal, idCargo);
                 }
+
+                reader.Close();
             }
             catch (Exception ex)
             {
@@ -143,20 +125,19 @@ namespace Proyecto_Prestamos
             string consulta = "select * from Empleado where idEmpleado = '" + idEmpleado + "' ";
             try
             {
-                SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    string id = reader.GetValue(0).ToString();
-                    string nombre = reader.GetValue(1).ToString();
-                    string cargo = reader.GetValue(2).ToString();
-                    string idSucursal = reader.GetValue(3).ToString();
-                    string nombreMunicipio = reader.GetValue(4).ToString();
-                    string estado = reader.GetValue(5).ToString();
+                    string id = reader.GetString(0); // Usa los métodos de tipo correcto
+                    string nombre = reader.GetString(1);
+                    DateTime fechaNacimiento = reader.GetDateTime(2);
+                    string idSucursal = reader.GetString(3);
+                    string idCargo = reader.GetString(4);
 
-                    emp = new Empleado(id, nombre, cargo, idSucursal, nombreMunicipio, estado);
+                    emp = new Empleado(id, nombre, fechaNacimiento, idSucursal, idCargo);
                 }
                 reader.Close();
             }
@@ -169,7 +150,7 @@ namespace Proyecto_Prestamos
             return emp;
         }
 
-        public bool editar(Empleado emp)
+        /*public bool editar(Empleado emp)
         {
             bool resultado = false;
             string consulta = "update Empleado set nombreEmpleado = '" + emp.getNombreEmpleado() + "', cargo = '" + emp.getCargo() + "', " +
@@ -188,7 +169,7 @@ namespace Proyecto_Prestamos
             }
 
             return resultado;
-        }
+        }*/
 
         public bool eliminar(Empleado emp)
         {

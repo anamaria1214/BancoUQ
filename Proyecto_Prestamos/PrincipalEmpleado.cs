@@ -14,16 +14,16 @@ namespace Proyecto_Prestamos
 		Empleado empleado;
         UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
 
-		public PrincipalEmpleado(Conexion cone)
+		public PrincipalEmpleado(Conexion cone, string nombreUusario)
 		{
             empleadoDao = new EmpleadoDao(cone);
+			this.empleado= empleadoDao.buscarEmpleado(nombreUusario);
             InitializeComponent();
 			instanciarSingleton();
 			
 		}
 		void instanciarSingleton()
 		{
-                empleado = empleadoDao.hallarEmpleadoPorCuenta(nombreUsuario);
                 UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
                 usuario.establecerUsuario(empleado);
 
@@ -46,6 +46,11 @@ namespace Proyecto_Prestamos
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+			MessageBox.Show("Nombre empleado: " + UsuarioSesion.obtenerInstancia().empleado.getNombreEmpleado());
         }
     }
 }

@@ -40,10 +40,7 @@ namespace Proyecto_Prestamos
 			bool login = empleadoDao.login(loginA, claveA);
 			if (login)
 			{
-                empleado = empleadoDao.hallarEmpleadoPorCuenta(loginA);
-                UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
-                usuario.establecerUsuario(empleado);
-                PrincipalEmpleado principalEmpl = new PrincipalEmpleado(cone);
+                PrincipalEmpleado principalEmpl = new PrincipalEmpleado(cone, loginA);
 				principalEmpl.Show();
 				MessageBox.Show("Usuario si encontrado");
             }

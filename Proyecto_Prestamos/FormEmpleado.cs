@@ -37,11 +37,11 @@ namespace Proyecto_Prestamos
             
 
 
-            emp = new Empleado(id, nombre, null, null, null, null);  // Crea un nuevo empleado
+            emp = new Empleado(id, nombre, DateTime.Now, null, null);  // Crea un nuevo empleado
             MessageBox.Show("Empleado creado");
 
             empDao = new EmpleadoDao(mfo);  // Crea una instancia de EmpleadoDAO
-            empDao.agregar(emp);  // Agrega el empleado a la base de datos
+            //empDao.agregar(emp);  // Agrega el empleado a la base de datos
         }
 
         // Evento del botón para buscar un empleado por su ID

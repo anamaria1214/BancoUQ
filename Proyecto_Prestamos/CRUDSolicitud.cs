@@ -18,9 +18,10 @@ namespace Proyecto_Prestamos
         Conexion cone;
         public CRUDSolicitud(Conexion cone)
         {
-            InitializeComponent();
-            this.SolicitudDao = new SolicitudDao(cone);
             this.cone = cone;
+            this.SolicitudDao = new SolicitudDao(cone);
+            InitializeComponent();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace Proyecto_Prestamos
                     tasa = (decimal)8.6;
                     break;
             }
-            Solicitud solicitud = new Solicitud("1", UsuarioSesion.obtenerInstancia().getEmpleado().getIdEmpleado(), monto, periodo, DateTime.Now, tasa);  
+            Solicitud solicitud = new Solicitud("1", UsuarioSesion.obtenerInstancia().empleado.getIdEmpleado(), monto, periodo, DateTime.Now, tasa);  
             SolicitudDao.agregarSolicitud(solicitud);
         }
     }
