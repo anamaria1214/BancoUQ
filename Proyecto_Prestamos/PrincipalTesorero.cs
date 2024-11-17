@@ -12,11 +12,32 @@ namespace Proyecto_Prestamos
 {
     public partial class PrincipalTesorero : Form
     {
-        public PrincipalTesorero()
+        Conexion cone;
+        SolicitudDao solicitudDao;
+        UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
+        public PrincipalTesorero(Conexion con)
         {
+            this.cone = con;
+            this.solicitudDao= new SolicitudDao(con);
             InitializeComponent();
+            pintarSolicitudes();
         }
-
+        private void pintarSolicitudes()
+        {
+           List<Solicitud> solicitudes = solicitudDao.obtenerSolicitudesPorEstado("1");
+            dataGridView1.Rows.Clear();
+            foreach(var solicitud in solicitudes)
+            {
+                dataGridView1.Rows.Add(
+                    solicitud.monto,
+                    solicitud.periodoMeses,
+                    solicitud.tasaInteres,
+                    solicitud.fechaSolicitud.ToShortDateString(),
+                    solicitud.idEmpleado,
+                    solicitud.idSolicitud
+                    );
+            }
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

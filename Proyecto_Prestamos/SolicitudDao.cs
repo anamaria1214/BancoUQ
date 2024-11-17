@@ -42,27 +42,43 @@ namespace Proyecto_Prestamos
             }
         }
 
-        public string obtenerSolicitudes()
+        public List<Solicitud> obtenerPrestamosPorEstado(string idEstado)
         {
-            string solicitudes = "";
-            string consulta = "select * from Solicitud where estado= '1'";
+            List<Solicitud> solicitudes = new List<Solicitud>();
+            string consulta = "SELECT * FROM SolicitudPrestamo WHERE idEstado = @idEstado";
+
             try
             {
-                SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                // Usa SqlCommand con parámetros para evitar inyección SQL
+                using (SqlCommand cmd = new SqlCommand(consulta, cone.getCon()))
                 {
-                    while (reader.Read())
+                    cmd.Parameters.AddWithValue("@idEstado", idEstado);
+
+                    using (SqlDataReader lector = cmd.ExecuteReader())
                     {
-                        solicitudes += reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString() + "\n";
+                        while (lector.Read())
+                        {
+                            // Crear un objeto SolicitudPrestamo por cada fila y añadirlo a la lista
+                            Solicitud solicitud = new Solicitud
+                            {
+                                idSolicitud = lector["idSolicitud"].ToString(),
+                                idEstado = lector["idEstado"].ToString(),
+                                monto = Convert.ToDecimal(lector["montoPedido"]),
+                                periodoMeses = Convert.ToDecimal(lector["periodoMeses"]),
+                                fechaSolicitud = Convert.ToDateTime(lector["fechaSolicitud"]),
+                                idEmpleado = lector["idEmpleado"].ToString(),
+                                tasaInteres= Convert.ToDecimal(lector["tasainteres"])
+                            };
+                            solicitudes.Add(solicitud);
+                        }
                     }
                 }
-                reader.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al buscar las solicitudes: " + ex.Message, "Error");
+                MessageBox.Show("Error al obtener los préstamos: " + ex.Message, "Error");
             }
+
             return solicitudes;
         }
 
