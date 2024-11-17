@@ -19,21 +19,33 @@ namespace Proyecto_Prestamos
 
         public bool agregarSolicitud(Solicitud solicitud)
         {
-            string consulta = "Insert into Solicitud (idSolicitud, montoPedido, periodoMeses,tasaInteres, fechaSolicitud,idEmpleado, idEstado) " +
-                    "Values('" + solicitud.GetIdSolicitud() + "','" + solicitud.GetMonto() +
-                    "','" + solicitud.GetPeriodoMeses() + "','" + solicitud.GetTasaInteres() +
-                    ", " + solicitud.GetFechaSolicitud() + ",'" + solicitud.GetIdSolicitud() +
-                    "','" + solicitud.GetEstado() + ")";
+            // Consulta SQL con parámetros
+            string consulta = "INSERT INTO SolicitudPrestamo (idSolicitud, montoPedido, periodoMeses, tasaInteres, fechaSolicitud, idEmpleado, idEstado) " +
+                              "VALUES (@idSolicitud, @montoPedido, @periodoMeses, @tasaInteres, @fechaSolicitud, @idEmpleado, @idEstado)";
             try
             {
-                
+                // Crear comando SQL y asociarlo con la conexión
                 SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+
+                // Asignar los valores de los parámetros desde el objeto 'solicitud'
+                cmd.Parameters.AddWithValue("@idSolicitud", solicitud.GetIdSolicitud()); // idSolicitud del objeto
+                cmd.Parameters.AddWithValue("@montoPedido", solicitud.GetMonto());       // montoPedido del objeto
+                cmd.Parameters.AddWithValue("@periodoMeses", solicitud.GetPeriodoMeses()); // periodoMeses del objeto
+                cmd.Parameters.AddWithValue("@tasaInteres", solicitud.GetTasaInteres()); // tasaInteres del objeto
+                cmd.Parameters.AddWithValue("@fechaSolicitud", solicitud.GetFechaSolicitud()); // fechaSolicitud del objeto
+                cmd.Parameters.AddWithValue("@idEmpleado", solicitud.GetIdEmpleado());   // idEmpleado del objeto
+                cmd.Parameters.AddWithValue("@idEstado", solicitud.GetEstado());         // idEstado del objeto
+
+                // Ejecutar la consulta
                 cmd.ExecuteNonQuery();
+
+                // Mostrar mensaje de éxito
                 MessageBox.Show("Solicitud agregada exitosamente", "Atención!");
                 return true;
             }
             catch (Exception ex)
             {
+                // Mostrar mensaje de error
                 MessageBox.Show("Error al agregar una Solicitud: " + ex.Message, "Error");
                 return false;
             }

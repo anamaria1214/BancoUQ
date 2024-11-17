@@ -18,6 +18,7 @@ namespace Proyecto_Prestamos
         Conexion cone = Conexion.Instancia;
         public CRUDSolicitud()
         {
+            this.solicitudDao = new SolicitudDao();
             InitializeComponent();
             
         }

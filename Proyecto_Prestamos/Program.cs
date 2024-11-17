@@ -26,7 +26,7 @@ namespace Proyecto_Prestamos
             Conexion conexion = Conexion.Instancia;
             Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new VentanaInicio());
+			Application.Run(new PrincipalTesorero());
 			
 		}
 		

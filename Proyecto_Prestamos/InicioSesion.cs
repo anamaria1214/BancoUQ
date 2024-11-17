@@ -31,7 +31,7 @@ namespace Proyecto_Prestamos
 		{
 
 		}
-		void IngresarClick()
+		void IngresarClick(object sender, EventArgs e)
 		{
 			string loginA, claveA;
 			loginA = idUsuario.Text;
