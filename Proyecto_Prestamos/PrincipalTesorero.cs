@@ -73,7 +73,14 @@ namespace Proyecto_Prestamos
             }
             else
             {
-               
+                if (solicitudDao.rechazarSolicitud(selecSolicitud))
+                {
+                    Solicitud solicitud = solicitudDao.obtenerSolicitudPorId(selecSolicitud);
+                    solicitud.setId(selecSolicitud);
+                    MessageBox.Show($"Se rechaza la solicitud: {selecSolicitud}");
+                    pintarSolicitudes();
+                    selecSolicitud = "0";
+                }
             }
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
