@@ -13,21 +13,21 @@ namespace Proyecto_Prestamos
         private CRUDSolicitud solicitudForm;
         private Conexion cone;
 
-        public SolicitudDao(Conexion cone)
+        public SolicitudDao(Conexion cone1)
         {
-            this.cone = cone;
+            this.cone = cone1;
         }
 
         public bool agregarSolicitud(Solicitud solicitud)
         {
+            string consulta = "Insert into Solicitud (idSolicitud, montoPedido, periodoMeses,tasaInteres, fechaSolicitud,idEmpleado, idEstado) " +
+                    "Values('" + solicitud.GetIdSolicitud() + "','" + solicitud.GetMonto() +
+                    "','" + solicitud.GetPeriodoMeses() + "','" + solicitud.GetTasaInteres() +
+                    ", " + solicitud.GetFechaSolicitud() + ",'" + solicitud.GetIdSolicitud() +
+                    "','" + solicitud.GetEstado() + ")";
             try
             {
-                string consulta = "Insert into Solicitud (idSolicitud, montoPedido, periodoMeses,tasaInteres, fechaSolicitud,idEmpleado, idEstado) " +
-                    "Values('" + solicitud.GetIdSolicitud() + "','" + solicitud.GetMonto() + 
-                    "','" + solicitud.GetPeriodoMeses() + "','" + solicitud.GetTasaInteres() + 
-                    ", " + solicitud.GetFechaSolicitud() + ",'" + solicitud.GetIdSolicitud() + 
-                    "','"+solicitud.GetEstado()+")";
-
+                
                 SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
 
 

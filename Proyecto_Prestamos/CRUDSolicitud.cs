@@ -13,14 +13,15 @@ namespace Proyecto_Prestamos
 {
     public partial class CRUDSolicitud : Form
     {
-        Solicitud Solicitud;
-        SolicitudDao SolicitudDao;
+        Solicitud solicitud;
+        SolicitudDao solicitudDao;
         Conexion cone;
         public CRUDSolicitud(Conexion cone)
         {
-            InitializeComponent();
             this.cone = cone;
-            this.SolicitudDao = new SolicitudDao(cone);
+            this.solicitudDao = new SolicitudDao(cone);
+            InitializeComponent();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -62,7 +63,7 @@ namespace Proyecto_Prestamos
                     break;
             }
             Solicitud solicitud = new Solicitud("1", UsuarioSesion.obtenerInstancia().empleado.getIdEmpleado(), monto, periodo, DateTime.Now, tasa);  
-            SolicitudDao.agregarSolicitud(solicitud);
+            solicitudDao.agregarSolicitud(solicitud);
         }
     }
 }

@@ -3,72 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\crudsucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\crudsucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\crudsucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\crudsucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\crudsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\crudsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\correonotificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\correonotificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\sucursaldao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\sucursaldao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\principaltesorero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\principaltesorero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\principalempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\principalempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\solicituddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\solicituddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\crudsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\crudsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\principalempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\principalempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\iniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\principaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\principaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\principalempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\principalempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\principaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\principaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\usuariosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\usuariosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\sucursaldao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\sucursaldao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\empleadodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\empleadodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\principalempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\principalempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\principaltesorero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\principaltesorero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\crudsucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\crudsucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\crudsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\crudsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\crudsucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\crudsucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\crudsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\crudsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\crudsucursal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\crudsucursal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\iniciousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\iniciousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\solicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\solicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\sucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\sucursal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -118,195 +130,271 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PrincipalTesorero.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalTesorero.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\PrincipalTesorero.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalTesorero.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto_Prestamos\\PrincipalTesorero.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T01:03:39.746Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CRUDSolicitud.cs",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSolicitud.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CRUDSolicitud.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSolicitud.cs",
-              "RelativeToolTip": "Proyecto_Prestamos\\CRUDSolicitud.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwEAAAAA1AAAAAAAAAA==",
+              "Title": "CorreoNotificacion.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CorreoNotificacion.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CorreoNotificacion.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CorreoNotificacion.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\CorreoNotificacion.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwAwAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T23:39:24.676Z",
+              "WhenOpened": "2024-11-17T05:40:39.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CRUDSucursal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CRUDSucursal.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto_Prestamos\\CRUDSucursal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T23:48:26.471Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SolicitudDao.cs",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\SolicitudDao.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\SolicitudDao.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\SolicitudDao.cs",
-              "RelativeToolTip": "Proyecto_Prestamos\\SolicitudDao.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAD4vx8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T23:44:02.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SucursalDao.cs",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\SucursalDao.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\SucursalDao.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\SucursalDao.cs",
-              "RelativeToolTip": "Proyecto_Prestamos\\SucursalDao.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:18:25.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CRUDSucursal.cs",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CRUDSucursal.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.cs",
-              "RelativeToolTip": "Proyecto_Prestamos\\CRUDSucursal.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAqwDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T23:48:30.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PrincipalAdmin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalAdmin.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\PrincipalAdmin.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalAdmin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto_Prestamos\\PrincipalAdmin.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T00:37:48.772Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PrincipalEmpleado.cs",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalEmpleado.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\PrincipalEmpleado.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalEmpleado.cs",
-              "RelativeToolTip": "Proyecto_Prestamos\\PrincipalEmpleado.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAD4vyMAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T23:07:43.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Program.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Program.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Program.cs",
-              "RelativeToolTip": "Proyecto_Prestamos\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAxwBwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T00:38:24.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CRUDSolicitud.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSolicitud.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CRUDSolicitud.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSolicitud.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto_Prestamos\\CRUDSolicitud.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T00:08:04.498Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "InicioSesion.cs",
               "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioSesion.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\InicioSesion.cs",
               "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioSesion.cs",
               "RelativeToolTip": "Proyecto_Prestamos\\InicioSesion.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAcwCoAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAcwDUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T07:07:36.276Z",
+              "WhenOpened": "2024-11-17T01:15:38.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "InicioSesion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioSesion.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\InicioSesion.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioSesion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto_Prestamos\\InicioSesion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T07:07:33.752Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PrincipalAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalAdmin.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\PrincipalAdmin.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalAdmin.cs",
-              "RelativeToolTip": "Proyecto_Prestamos\\PrincipalAdmin.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T00:37:54.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "PrincipalEmpleado.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalEmpleado.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\PrincipalEmpleado.cs",
               "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalEmpleado.cs [Dise\u00F1o]",
               "RelativeToolTip": "Proyecto_Prestamos\\PrincipalEmpleado.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T22:48:37.962Z",
+              "WhenOpened": "2024-11-17T02:43:54.062Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 3,
+              "Title": "PrincipalEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalEmpleado.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\PrincipalEmpleado.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalEmpleado.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\PrincipalEmpleado.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAiwE8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T02:43:58.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SucursalDao.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\SucursalDao.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\SucursalDao.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\SucursalDao.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\SucursalDao.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwCgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:38.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Auditoria.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Auditoria.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Auditoria.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Auditoria.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\Auditoria.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T04:04:41.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuarioSesion.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\UsuarioSesion.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\UsuarioSesion.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\UsuarioSesion.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\UsuarioSesion.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAkwA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T04:00:40.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InicioSesion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioSesion.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\InicioSesion.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioSesion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto_Prestamos\\InicioSesion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:38.544Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SolicitudDao.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\SolicitudDao.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\SolicitudDao.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\SolicitudDao.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\SolicitudDao.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:38.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CRUDSucursal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CRUDSucursal.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto_Prestamos\\CRUDSucursal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:53.549Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CRUDSolicitud.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSolicitud.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CRUDSolicitud.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSolicitud.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\CRUDSolicitud.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAD4v0EAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:50:01.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PrincipalTesorero.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalTesorero.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\PrincipalTesorero.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalTesorero.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\PrincipalTesorero.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T03:24:47.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "EmpleadoDao.cs",
               "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\EmpleadoDao.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\EmpleadoDao.cs",
               "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\EmpleadoDao.cs",
               "RelativeToolTip": "Proyecto_Prestamos\\EmpleadoDao.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAA8wH8AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAD4AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T05:53:04.387Z"
+              "WhenOpened": "2024-11-17T01:15:38.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Conexion.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Conexion.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Conexion.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\Conexion.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:38.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CRUDSucursal.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CRUDSucursal.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\CRUDSucursal.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwBEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:58.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Program.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Program.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Program.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:38.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "InicioUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioUsuario.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\InicioUsuario.cs",
+              "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\galvi\\BasesDatos-I\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:38.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CRUDSolicitud.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSolicitud.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CRUDSolicitud.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSolicitud.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto_Prestamos\\CRUDSolicitud.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:50:48.043Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\FormEmpleado.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\FormEmpleado.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\FormEmpleado.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\FormEmpleado.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAmwNEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:38.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CRUDSucursal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.Designer.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\CRUDSucursal.Designer.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\CRUDSucursal.Designer.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\CRUDSucursal.Designer.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAANMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:18:10.732Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Empleado.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Empleado.cs",
+              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Empleado.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\Empleado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:38.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Usuario.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\Usuario.cs",
@@ -314,57 +402,22 @@
               "RelativeToolTip": "Proyecto_Prestamos\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T07:06:49.551Z"
+              "WhenOpened": "2024-11-17T01:15:38.524Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Empleado.cs",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Empleado.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Empleado.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Empleado.cs",
-              "RelativeToolTip": "Proyecto_Prestamos\\Empleado.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAArwD4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T06:05:36.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "MainForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\MainForm.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\MainForm.cs",
               "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos-main\\Proyecto_Prestamos\\MainForm.cs [Dise\u00F1o]",
               "RelativeToolTip": "..\\..\\..\\..\\galvi\\BasesDatos-I\\ProyectoPrestamos-main\\Proyecto_Prestamos\\MainForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T06:46:47.38Z"
+              "WhenOpened": "2024-11-17T01:15:38.529Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "InicioUsuario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioUsuario.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\InicioUsuario.cs",
-              "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioUsuario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\galvi\\BasesDatos-I\\ProyectoPrestamos-main\\Proyecto_Prestamos\\InicioUsuario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:52:39.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Sucursal.cs",
-              "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Sucursal.cs",
-              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Sucursal.cs",
-              "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Sucursal.cs",
-              "RelativeToolTip": "Proyecto_Prestamos\\Sucursal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T06:27:28.384Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Solicitud.cs",
               "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Solicitud.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\Solicitud.cs",
@@ -372,11 +425,11 @@
               "RelativeToolTip": "Proyecto_Prestamos\\Solicitud.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:49:24.134Z"
+              "WhenOpened": "2024-11-17T01:15:38.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "Municipio.cs",
               "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Municipio.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\Municipio.cs",
@@ -384,11 +437,11 @@
               "RelativeToolTip": "Proyecto_Prestamos\\Municipio.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T06:25:16.628Z"
+              "WhenOpened": "2024-11-17T01:15:38.57Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Cargo.cs",
               "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\Cargo.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\Cargo.cs",
@@ -396,18 +449,18 @@
               "RelativeToolTip": "Proyecto_Prestamos\\Cargo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T06:16:14.187Z"
+              "WhenOpened": "2024-11-17T01:15:38.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "FormEmpleado.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\FormEmpleado.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\FormEmpleado.cs",
               "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\FormEmpleado.cs [Dise\u00F1o]",
               "RelativeToolTip": "Proyecto_Prestamos\\FormEmpleado.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T05:53:14.029Z"
+              "WhenOpened": "2024-11-17T01:15:38.588Z"
             }
           ]
         }

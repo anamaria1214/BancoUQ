@@ -57,7 +57,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auditoria.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="CorreoNotificacion.cs" />
     <Compile Include="CRUDSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>

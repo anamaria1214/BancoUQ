@@ -43,6 +43,28 @@ namespace Proyecto_Prestamos
             return flag;
         }
 
+        public string retornarTipo(string nombreUsuario)
+        {
+            string consulta = "select * from CuentaUsuario where nombreUsuario= " + nombreUsuario;
+            string tipo = "";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    tipo = reader.GetString(3);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar el tipo de cuenta: " + ex);
+            }
+            return tipo;
+        }
+
 
 
 

@@ -49,7 +49,7 @@ namespace Proyecto_Prestamos
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tablaPrestamos = new System.Windows.Forms.DataGridView();
             this.montoPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.periodoMeses = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tasaInteres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +57,7 @@ namespace Proyecto_Prestamos
             this.valorCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPrestamos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,19 +154,19 @@ namespace Proyecto_Prestamos
             this.label4.TabIndex = 7;
             this.label4.Text = "label4";
             // 
-            // dataGridView1
+            // tablaPrestamos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tablaPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaPrestamos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.montoPrestamo,
             this.periodoMeses,
             this.tasaInteres,
             this.fechaInicio,
             this.valorCuota});
-            this.dataGridView1.Location = new System.Drawing.Point(222, 148);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(523, 212);
-            this.dataGridView1.TabIndex = 8;
+            this.tablaPrestamos.Location = new System.Drawing.Point(222, 148);
+            this.tablaPrestamos.Name = "tablaPrestamos";
+            this.tablaPrestamos.Size = new System.Drawing.Size(523, 212);
+            this.tablaPrestamos.TabIndex = 8;
             // 
             // montoPrestamo
             // 
@@ -198,7 +198,7 @@ namespace Proyecto_Prestamos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 372);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tablaPrestamos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
@@ -208,7 +208,7 @@ namespace Proyecto_Prestamos
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPrestamos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,7 +218,7 @@ namespace Proyecto_Prestamos
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tablaPrestamos;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoPrestamo;
         private System.Windows.Forms.DataGridViewTextBoxColumn periodoMeses;
         private System.Windows.Forms.DataGridViewTextBoxColumn tasaInteres;
