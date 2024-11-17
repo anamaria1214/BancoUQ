@@ -11,26 +11,23 @@ namespace Proyecto_Prestamos
     {
         private MainForm mfo;
         private CRUDSolicitud solicitudForm;
-        private Conexion cone;
+        private Conexion cone = Conexion.Instancia;
 
-        public SolicitudDao(Conexion cone)
+        public SolicitudDao()
         {
-            this.cone = cone;
         }
 
         public bool agregarSolicitud(Solicitud solicitud)
         {
+            string consulta = "Insert into Solicitud (idSolicitud, montoPedido, periodoMeses,tasaInteres, fechaSolicitud,idEmpleado, idEstado) " +
+                    "Values('" + solicitud.GetIdSolicitud() + "','" + solicitud.GetMonto() +
+                    "','" + solicitud.GetPeriodoMeses() + "','" + solicitud.GetTasaInteres() +
+                    ", " + solicitud.GetFechaSolicitud() + ",'" + solicitud.GetIdSolicitud() +
+                    "','" + solicitud.GetEstado() + ")";
             try
             {
-                string consulta = "Insert into Solicitud (idSolicitud, montoPedido, periodoMeses,tasaInteres, fechaSolicitud,idEmpleado, idEstado) " +
-                    "Values('" + solicitud.GetIdSolicitud() + "','" + solicitud.GetMonto() + 
-                    "','" + solicitud.GetPeriodoMeses() + "','" + solicitud.GetTasaInteres() + 
-                    ", " + solicitud.GetFechaSolicitud() + ",'" + solicitud.GetIdSolicitud() + 
-                    "','"+solicitud.GetEstado()+")";
-
+                
                 SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
-
-
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Solicitud agregada exitosamente", "Atención!");
                 return true;
@@ -41,48 +38,6 @@ namespace Proyecto_Prestamos
                 return false;
             }
         }
-
-        public List<Solicitud> obtenerPrestamosPorEstado(string idEstado)
-        {
-            List<Solicitud> solicitudes = new List<Solicitud>();
-            string consulta = "SELECT * FROM SolicitudPrestamo WHERE idEstado = @idEstado";
-
-            try
-            {
-                // Usa SqlCommand con parámetros para evitar inyección SQL
-                using (SqlCommand cmd = new SqlCommand(consulta, cone.getCon()))
-                {
-                    cmd.Parameters.AddWithValue("@idEstado", idEstado);
-
-                    using (SqlDataReader lector = cmd.ExecuteReader())
-                    {
-                        while (lector.Read())
-                        {
-                            // Crear un objeto SolicitudPrestamo por cada fila y añadirlo a la lista
-                            Solicitud solicitud = new Solicitud
-                            {
-                                idSolicitud = lector["idSolicitud"].ToString(),
-                                idEstado = lector["idEstado"].ToString(),
-                                monto = Convert.ToDecimal(lector["montoPedido"]),
-                                periodoMeses = Convert.ToDecimal(lector["periodoMeses"]),
-                                fechaSolicitud = Convert.ToDateTime(lector["fechaSolicitud"]),
-                                idEmpleado = lector["idEmpleado"].ToString(),
-                                tasaInteres= Convert.ToDecimal(lector["tasainteres"])
-                            };
-                            solicitudes.Add(solicitud);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al obtener los préstamos: " + ex.Message, "Error");
-            }
-
-            return solicitudes;
-        }
-
-
         public bool eliminarSolicitud(String idSolicitud)
         {
             bool resultado = false;
@@ -133,23 +88,23 @@ namespace Proyecto_Prestamos
         public List<Solicitud> obtenerSolicitudesPorEstado(string estado)
         {
             List<Solicitud> solicitudes = new List<Solicitud>();
-            string consulta = "SELECT * FROM Solicitud WHERE estado = @estado";
+            string consulta = "SELECT * FROM SolicitudPrestamo WHERE idEstado = @estado";
             try
             {
-                SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
                 cmd.Parameters.AddWithValue("@estado", estado);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    string id = reader.GetString(0);
-                    decimal monto = reader.GetDecimal(3);
-                    decimal periodoMeses = reader.GetDecimal(4);
-                    decimal tasaInteres = reader.GetDecimal(5);
-                    DateTime fechaSolicitud = reader.GetDateTime(5);
-                    string idEmpleado = reader.GetString(2);
-                    string estado1 = reader.GetString(1);    
+                    string idSolicitud = reader.GetString(0);             // idSolicitud (nvarchar(30))
+                    decimal montoPedido = reader.GetDecimal(1);           // montoPedido (decimal(18,2))
+                    int periodoMeses = reader.GetInt32(2);                // periodoMeses (int)
+                    decimal tasaInteres = reader.GetDecimal(3);           // tasaInteres (decimal(5,2))
+                    DateTime fechaSolicitud = reader.GetDateTime(4);      // fechaSolicitud (date)
+                    string idEmpleado = reader.GetString(5);              // idEmpleado (nvarchar(10))
+                    string idEstado = reader.GetString(6);
 
-                    Solicitud solicitud = new Solicitud(estado1, idEmpleado, monto, periodoMeses, fechaSolicitud, tasaInteres);
+                    Solicitud solicitud = new Solicitud(idEstado, idEmpleado, montoPedido, periodoMeses, fechaSolicitud, tasaInteres );
                     solicitudes.Add(solicitud);
                 }
 

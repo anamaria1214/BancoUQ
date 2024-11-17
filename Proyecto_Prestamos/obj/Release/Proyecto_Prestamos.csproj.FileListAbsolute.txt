@@ -1,0 +1,13 @@
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.csproj.AssemblyReference.cache
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.CRUDSolicitud.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.CRUDSucursal.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.FormEmpleado.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.VentanaInicio.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.InicioUsuario.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.PrincipalAdmin.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.PrincipalEmpleado.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.PrincipalTesorero.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.VentanaSolicitud.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.VistaAuditoria.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.csproj.GenerateResource.cache
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Release\Proyecto_Prestamos.csproj.CoreCompileInputs.cache

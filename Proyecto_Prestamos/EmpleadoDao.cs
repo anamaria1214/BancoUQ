@@ -8,11 +8,11 @@ namespace Proyecto_Prestamos
     public class EmpleadoDao
     {
         private MainForm mfo;
-        Conexion cone;
+        Conexion cone= Conexion.Instancia;
 
-        public EmpleadoDao(Conexion cone)
+        public EmpleadoDao()
         {
-            this.cone = cone;
+ 
         }
 
         public EmpleadoDao(MainForm mfo)

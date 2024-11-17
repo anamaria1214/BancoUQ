@@ -12,13 +12,11 @@ namespace Proyecto_Prestamos
 {
     public partial class PrincipalTesorero : Form
     {
-        Conexion cone;
+        Conexion cone=Conexion.Instancia;
         SolicitudDao solicitudDao;
-        UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
-        public PrincipalTesorero(Conexion con)
+        public PrincipalTesorero()
         {
-            this.cone = con;
-            this.solicitudDao= new SolicitudDao(con);
+            this.solicitudDao= new SolicitudDao();
             InitializeComponent();
             pintarSolicitudes();
         }
@@ -49,6 +47,11 @@ namespace Proyecto_Prestamos
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
