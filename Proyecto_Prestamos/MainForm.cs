@@ -26,13 +26,7 @@ namespace Proyecto_Prestamos
             InitializeComponent();
         }
 
-        // Ejemplo de cómo abrir un formulario para gestionar empleados
-        void EmpleadoToolStripMenuItemClick(object sender, EventArgs e)
-        {
-            fe = new FormEmpleado(this); // Pasa el MainForm al formulario
-            fe.MdiParent = this; // Define el formulario como hijo (Mdi)
-            fe.Show(); // Muestra el formulario de gestión de empleados
-        }
+   
 
         // Método para salir de la aplicación y cerrar la conexión
         void SalirToolStripMenuItemClick(object sender, EventArgs e)

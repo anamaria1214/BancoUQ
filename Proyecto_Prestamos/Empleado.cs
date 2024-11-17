@@ -4,18 +4,34 @@ namespace Proyecto_Prestamos
 {
 	public class Empleado
 	{
+<<<<<<< Updated upstream
         private String idEmpleado, nombreEmpleado, estado;
         private Cargo cargo;
         private Sucursal idSucursal;
         private Municipio nombreMunicipio;
 		public Empleado(String idEmpleado, String nombreEmpleado, Cargo cargo, Sucursal idSucursal, Municipio nombreMunicipio,String estado)
+=======
+		private String idEmpleado, nombreEmpleado, cargo, idSucursal, email;
+        private DateTime fechaNaci;
+        //Salario derivado
+		public Empleado(String idEmpleado, String nombreEmpleado, DateTime fechaNaci,String idSucursal, String cargo, String email)
+>>>>>>> Stashed changes
 		{
 			this.idEmpleado=idEmpleado;
 			this.nombreEmpleado=nombreEmpleado;
 			this.cargo=cargo;
 			this.idSucursal=idSucursal;
+<<<<<<< Updated upstream
 			this.nombreMunicipio= nombreMunicipio;
             this.estado = estado;
+=======
+            this.fechaNaci =fechaNaci;
+            this.email=email;
+		}
+        public Empleado()
+        {
+
+>>>>>>> Stashed changes
         }
 
         public string getIdEmpleado()
@@ -58,6 +74,7 @@ namespace Proyecto_Prestamos
             this.idSucursal = idSucursal;
         }
 
+<<<<<<< Updated upstream
         public Municipio getNombreMunicipio()
         {
             return nombreMunicipio;
@@ -79,6 +96,23 @@ namespace Proyecto_Prestamos
         }
 
        
+=======
+        public string getEmail()
+        {
+            return email;
+        }
+
+        public void setEmail(string email)
+        {
+            this.email = email;
+        }
+
+        public DateTime getFechaNaci()
+        {
+            return fechaNaci;
+        }
+
+>>>>>>> Stashed changes
         public void solicitarPrestamo(float monto, int periodo)
         {
             Console.WriteLine("Solicitud de préstamo realizada por el empleado {0} para un monto de {1} a {2} meses.", nombreEmpleado, monto, periodo);

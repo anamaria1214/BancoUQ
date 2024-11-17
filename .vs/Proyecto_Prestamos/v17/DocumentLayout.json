@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\galvi\\basesdatos-i\\proyectoprestamos.nuevo\\bancouq\\proyecto_prestamos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,10 +52,25 @@
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\sucursaldao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\galvi\\basesdatos-i\\proyectoprestamos.nuevo\\bancouq\\proyecto_prestamos\\empleadodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\empleadodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\proyecto_prestamos\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\proyecto_prestamos\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\proyecto_prestamos\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\proyecto_prestamos\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -69,6 +85,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\proyecto_prestamos\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\proyecto_prestamos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\proyecto_prestamos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -77,11 +101,17 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
+<<<<<<< Updated upstream
           "DockedWidth": 200,
           "SelectedChildIndex": 0,
+=======
+          "DockedWidth": 166,
+          "SelectedChildIndex": 5,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\Program.cs",
@@ -92,10 +122,71 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T17:52:46.602Z",
               "EditorCaption": ""
+=======
+              "DocumentIndex": 4,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\Conexion.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Conexion.cs",
+              "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\Conexion.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\Conexion.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T06:12:00.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\Empleado.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Empleado.cs",
+              "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\Empleado.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\Empleado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T06:09:55.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\Program.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\Program.cs",
+              "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\Program.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T05:59:15.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmpleadoDao.cs",
+              "DocumentMoniker": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\EmpleadoDao.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\EmpleadoDao.cs",
+              "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\EmpleadoDao.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\EmpleadoDao.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAswJcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T05:49:04.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\FormEmpleado.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\FormEmpleado.cs",
+              "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\FormEmpleado.cs",
+              "RelativeToolTip": "Proyecto_Prestamos\\FormEmpleado.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAgwIoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T05:46:38.809Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+<<<<<<< Updated upstream
               "Title": "InicioUsuario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\InicioUsuario.cs",
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\InicioUsuario.cs",
@@ -279,8 +370,15 @@
               "RelativeDocumentMoniker": "Proyecto_Prestamos\\FormEmpleado.cs",
               "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos-main\\Proyecto_Prestamos\\FormEmpleado.cs [Dise\u00F1o]",
               "RelativeToolTip": "..\\..\\ProyectoPrestamos-main\\Proyecto_Prestamos\\FormEmpleado.cs [Dise\u00F1o]",
+=======
+              "Title": "FormEmpleado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\FormEmpleado.cs",
+              "RelativeDocumentMoniker": "Proyecto_Prestamos\\FormEmpleado.cs",
+              "ToolTip": "C:\\Users\\galvi\\BasesDatos-I\\ProyectoPrestamos.Nuevo\\BancoUQ\\Proyecto_Prestamos\\FormEmpleado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto_Prestamos\\FormEmpleado.cs [Dise\u00F1o]",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T05:53:14.029Z"
+              "WhenOpened": "2024-11-17T05:46:08.981Z"
             }
           ]
         }

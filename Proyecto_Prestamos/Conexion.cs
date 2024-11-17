@@ -21,7 +21,11 @@ namespace Proyecto_Prestamos
             {
                 // Cadena de conexión a tu base de datos SQL Server
                 String cadenaConexion = "Data Source=PAV\\SQLEXPRESS;Initial Catalog=BancoUQ;Integrated Security=True";
+<<<<<<< Updated upstream
                 con = new SqlConnection(@cadenaConexion);
+=======
+                con = new SqlConnection(cadenaConexion);
+>>>>>>> Stashed changes
                 
                 // Abriendo la conexión
                 con.Open();
