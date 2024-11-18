@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Proyecto_Prestamos
 {
@@ -13,11 +12,11 @@ namespace Proyecto_Prestamos
 		[STAThread]
 		private static void Main(string[] args)
 		{
-            Conexion conexion = new Conexion();
-            Application.EnableVisualStyles();
+			Conexion conexion = new Conexion();
+			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new VentanaInicio(conexion));
-			
+			MessageBox.Show("Exotico");
+			Application.Run(new FormEmpleado(conexion));
 		}
 		
 	}

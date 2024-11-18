@@ -10,6 +10,7 @@ namespace Proyecto_Prestamos
 
 	public partial class PrincipalEmpleado : Form
 	{
+<<<<<<< HEAD
 		string nombreUsuario;
 		Conexion cone;
 		EmpleadoDao empleadoDao;
@@ -57,11 +58,20 @@ namespace Proyecto_Prestamos
             }
         }
         void Label1Click(object sender, EventArgs e)
+=======
+		public PrincipalEmpleado()
+		{
+			InitializeComponent();
+			
+		}
+		void Label1Click(object sender, EventArgs e)
+>>>>>>> galvis
 		{
 	
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
+<<<<<<< HEAD
 			CRUDSolicitud solitud= new CRUDSolicitud(this.cone);
 			solitud.Show();
 		}
@@ -141,4 +151,10 @@ namespace Proyecto_Prestamos
             }
         }
     }
+=======
+			VentanaSolicitud solitud= new VentanaSolicitud();
+			solitud.Show();
+		}
+	}
+>>>>>>> galvis
 }

@@ -85,28 +85,68 @@ namespace Proyecto_Prestamos
         public Sucursal obtenerSucursal(string idSucursal)
         {
             Sucursal sucursal = null;
-            string consulta = "select * from Sucursal where idSucursal = '" + idSucursal + "' ";
+            string consulta = "SELECT * FROM Sucursal WHERE idSucursal = @idSucursal"; // Usa parámetros para evitar inyección SQL
             try
             {
                 SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+                cmd.Parameters.AddWithValue("@idSucursal", idSucursal); // Agregar el parámetro a la consulta
                 SqlDataReader reader = cmd.ExecuteReader();
+
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    string id = reader.GetValue(0).ToString();
-                    string nombre = reader.GetValue(1).ToString();
-                    string idMunicipio = reader.GetValue(2).ToString();
-                    string direccion = reader.GetValue(3).ToString();
-                    sucursal = new Sucursal(id, nombre,  direccion, idMunicipio);
+
+                    // Obtener los valores básicos de la sucursal
+                    string id = reader.GetString(0); // idSucursal
+                    string nombre = reader.GetString(1); // nombreSucursal
+                    string idMunicipioStr = reader.GetString(2); // idMunicipio (como string o según el tipo en la base de datos)
+                    string direccion = reader.GetString(3); // dirección
+
+                    // Crear el objeto Municipio
+                    Municipio municipio = obtenerMunicipioPorId(idMunicipioStr); // Método para buscar Municipio
+
+                    // Crear la instancia de Sucursal
+                    sucursal = new Sucursal(id, nombre, municipio, direccion);
                 }
                 reader.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al buscar empleado: " + ex.Message, "Error");
+                MessageBox.Show("Error al buscar sucursal: " + ex.Message, "Error");
             }
             return sucursal;
         }
+
+        public Municipio obtenerMunicipioPorId(string idMunicipio)
+        {
+            Municipio municipio = null;
+            string consulta = "SELECT * FROM Municipio WHERE idMunicipio = @idMunicipio";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+                cmd.Parameters.AddWithValue("@idMunicipio", idMunicipio);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    string id = reader.GetString(0); // idMunicipio
+                    string nombre = reader.GetString(1); // nombre del municipio
+                    int poblacion = reader.GetInt16(2);
+
+                    municipio = new Municipio(id, nombre, poblacion);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener municipio: " + ex.Message, "Error");
+            }
+
+            return municipio;
+        }
+
 
         public bool actualizarSucursal(Sucursal sucursal)
         {

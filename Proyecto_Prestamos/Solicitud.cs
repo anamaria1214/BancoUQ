@@ -2,64 +2,58 @@
 
 namespace Proyecto_Prestamos
 {
-
-    public class Solicitud
-
-    {
-        public String idSolicitud, idEstado, idEmpleado;
-        public decimal monto, periodoMeses, tasaInteres;
-        public DateTime fechaSolicitud;
+	
+	public class Solicitud
+	
+	{
+		public String idSolicitud, estado, idEmpleado;
+		public int periodoMeses;
+		public DateTime  fechaSolicitud;
+		public decimal monto;
         //tasa de interes derivada
 
-        public Solicitud(String estado, String idEmpleado, decimal monto, decimal periodoMeses, DateTime fechaSolicitud, decimal tasaInteres)
-        {
-            this.idSolicitud = Guid.NewGuid().ToString();
-            this.idEstado = estado;
-            this.monto = monto;
-            this.periodoMeses = periodoMeses;
-            this.fechaSolicitud = fechaSolicitud;
-            this.idEmpleado = idEmpleado;
-            this.tasaInteres= tasaInteres;
-        }
-
-        public Solicitud()
-        {
-
-        }
-
-        public string GetIdSolicitud()
-        {
-            return idSolicitud;
-        }
-
-        public string GetEstado()
-        {
-            return idEstado;
-        }
-
-        public string GetIdEmpleado()
-        {
-            return idEmpleado;
-        }
-
-        public decimal GetMonto()
-        {
-            return monto;
-        }
-
-        public decimal GetPeriodoMeses()
-        {
-            return periodoMeses;
-        }
-
-        public DateTime GetFechaSolicitud()
-        {
-            return fechaSolicitud;
-        }
-
-        public decimal GetTasaInteres()
-        {
-            return tasaInteres;
-        }
-    }
+        public Solicitud(String idSolicitud, String estado,String idEmpleado,decimal monto, int periodoMeses, DateTime fechaSolicitud)
+		{
+			this.idSolicitud=idSolicitud;
+			this.estado=estado;
+			this.monto=monto;
+			this.periodoMeses=periodoMeses;
+			this.fechaSolicitud=fechaSolicitud;
+			this.idEmpleado=idEmpleado;
+		}
+		
+		public Solicitud(){
+			
+		}
+		
+		 public string GetIdSolicitud()
+	    {
+	        return idSolicitud;
+	    }
+	
+	    public string GetEstado()
+	    {
+	        return estado;
+	    }
+	
+	    public string GetIdEmpleado()
+	    {
+	        return idEmpleado;
+	    }
+	
+	    public decimal GetMonto()
+	    {
+	        return monto;
+	    }
+	
+	    public int GetPeriodoMeses()
+	    {
+	        return periodoMeses;
+	    }
+	
+	    public DateTime GetFechaSolicitud()
+	    {
+	        return fechaSolicitud;
+	    }
+		}
 }

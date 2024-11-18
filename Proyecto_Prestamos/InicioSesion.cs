@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -69,10 +68,5 @@ namespace Proyecto_Prestamos
 				contrasenia.Clear();
 			}
 		}
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
+	}
 }
