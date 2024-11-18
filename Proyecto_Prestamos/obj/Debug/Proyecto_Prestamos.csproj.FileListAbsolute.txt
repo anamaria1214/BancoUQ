@@ -1,42 +1,18 @@
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csprojResolveAssemblyReference.cache
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.GenerateResource.Cache
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.exe.config
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.exe
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.pdb
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.exe
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.pdb
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VentanaInicio.resources
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VentanaSolicitud.resources
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.InicioUsuario.resources
-C:\Users\ANAMARIA\OneDrive\Documentos\SharpDevelop Projects\Proyecto_Prestamos\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.PrincipalEmpleado.resources
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.exe.config
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.exe
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.pdb
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VentanaInicio.resources
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.InicioUsuario.resources
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.PrincipalEmpleado.resources
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VentanaSolicitud.resources
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.GenerateResource.Cache
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.exe
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.pdb
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.AssemblyReference.cache
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.CoreCompileInputs.cache
-C:\Users\galvi\BasesDatos-I\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.FormEmpleado.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.exe.config
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.exe
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.pdb
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.AssemblyReference.cache
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.FormEmpleado.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VentanaInicio.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.InicioUsuario.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.PrincipalEmpleado.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VentanaSolicitud.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.GenerateResource.cache
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.CoreCompileInputs.cache
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.exe
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.pdb
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.CRUDSucursal.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.CRUDSolicitud.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.PrincipalAdmin.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.PrincipalTesorero.resources
-C:\Users\ANAMARIA\Downloads\ProyectoPrestamos-main\ProyectoPrestamos-main\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VistaAuditoria.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.AssemblyReference.cache
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.CRUDSolicitud.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.CRUDSucursal.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.FormEmpleado.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VentanaInicio.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.InicioUsuario.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.PrincipalAdmin.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.PrincipalEmpleado.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.PrincipalTesorero.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VentanaSolicitud.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.VistaAuditoria.resources
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.GenerateResource.cache
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.csproj.CoreCompileInputs.cache
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.exe.config
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.exe
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\bin\Debug\Proyecto_Prestamos.pdb
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.exe
+C:\Users\Juanes\Desktop\Github\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.pdb

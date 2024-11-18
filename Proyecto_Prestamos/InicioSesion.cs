@@ -7,29 +7,29 @@ namespace Proyecto_Prestamos
 {
 	public partial class VentanaInicio : Form
 	{
-		Conexion cone;
+		Conexion cone= Conexion.Instancia;
 		EmpleadoDao empleadoDao;
 		Empleado empleado;
-        UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
+		UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
 
-        public VentanaInicio(Conexion con)
+		public VentanaInicio()
 		{
-			this.cone = con;
-			this.empleadoDao= new EmpleadoDao(cone);
+
+			this.empleadoDao = new EmpleadoDao();
 			InitializeComponent();
-			
+
 		}
 		void Label1Click(object sender, EventArgs e)
 		{
-	
+
 		}
 		void Label2Click(object sender, EventArgs e)
 		{
-	
+
 		}
 		void VentanaInicioLoad(object sender, EventArgs e)
 		{
-	
+
 		}
 		void IngresarClick(object sender, EventArgs e)
 		{
@@ -40,9 +40,9 @@ namespace Proyecto_Prestamos
 			bool login = empleadoDao.login(loginA, claveA);
 			if (login)
 			{
-                PrincipalEmpleado principalEmpl = new PrincipalEmpleado(cone, loginA);
+                PrincipalEmpleado principalEmpl = new PrincipalEmpleado( loginA);
 				principalEmpl.Show();
-				MessageBox.Show("Usuario si encontrado");
+				MessageBox.Show("Usuario encontrado");
             }
             else
 			{

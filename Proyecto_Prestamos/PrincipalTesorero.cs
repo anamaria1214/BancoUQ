@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,13 +13,14 @@ namespace Proyecto_Prestamos
 {
     public partial class PrincipalTesorero : Form
     {
-        Conexion cone;
+        Conexion cone=Conexion.Instancia;
         SolicitudDao solicitudDao;
-        UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
-        public PrincipalTesorero(Conexion con)
+        private string selecSolicitud="0";
+        PrestamoDao prestamoDao;
+        public PrincipalTesorero()
         {
-            this.cone = con;
-            this.solicitudDao= new SolicitudDao(con);
+            this.solicitudDao= new SolicitudDao();
+            this.prestamoDao= new PrestamoDao();
             InitializeComponent();
             pintarSolicitudes();
         }
@@ -38,6 +40,49 @@ namespace Proyecto_Prestamos
                     );
             }
         }
+        private void aprobar(object sender, EventArgs e)
+        {
+            if (selecSolicitud.Equals("0")){
+                MessageBox.Show($"No se ha seleccionado una solicitud");
+            }
+            else
+            {
+
+                if (solicitudDao.aprobarSolicitud(selecSolicitud))
+                {
+                    Solicitud solicitud = solicitudDao.obtenerSolicitudPorId(selecSolicitud);
+                    solicitud.setId(selecSolicitud);
+                    MessageBox.Show($"Se aprueba la solicitud: {selecSolicitud}");
+                    pintarSolicitudes();
+                    Prestamo prestamo = new Prestamo(solicitud.idEmpleado, solicitud.idSolicitud, 12345 , solicitud.monto, solicitud.tasaInteres, DateTime.Now, (int) solicitud.periodoMeses);
+                    prestamoDao.agregarPrestamo(prestamo);
+                    selecSolicitud = "0";
+                }
+                else
+                {
+                    MessageBox.Show($"Hubo un error al aprobar la solicitud: {selecSolicitud}");
+                }
+                
+            }
+        }
+        private void rechazar(object sender, EventArgs e)
+        {
+            if (selecSolicitud.Equals("0"))
+            {
+                MessageBox.Show($"No se ha seleccionado una solicitud");
+            }
+            else
+            {
+                if (solicitudDao.rechazarSolicitud(selecSolicitud))
+                {
+                    Solicitud solicitud = solicitudDao.obtenerSolicitudPorId(selecSolicitud);
+                    solicitud.setId(selecSolicitud);
+                    MessageBox.Show($"Se rechaza la solicitud: {selecSolicitud}");
+                    pintarSolicitudes();
+                    selecSolicitud = "0";
+                }
+            }
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -51,6 +96,17 @@ namespace Proyecto_Prestamos
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+     
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow filaSeleccionada = dataGridView1.Rows[e.RowIndex];
+
+                selecSolicitud = filaSeleccionada.Cells[5].Value.ToString(); // Por índice
+            }
         }
     }
 }

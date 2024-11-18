@@ -9,14 +9,14 @@ namespace Proyecto_Prestamos
 	public partial class PrincipalEmpleado : Form
 	{
 		string nombreUsuario;
-		Conexion cone;
+		Conexion cone = Conexion.Instancia;
 		EmpleadoDao empleadoDao;
 		Empleado empleado;
         UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
 
-		public PrincipalEmpleado(Conexion cone, string nombreUusario)
+		public PrincipalEmpleado( string nombreUusario)
 		{
-            empleadoDao = new EmpleadoDao(cone);
+            empleadoDao = new EmpleadoDao();
 			this.empleado= empleadoDao.buscarEmpleado(nombreUusario);
             InitializeComponent();
 			instanciarSingleton();
@@ -34,7 +34,7 @@ namespace Proyecto_Prestamos
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
-			CRUDSolicitud solitud= new CRUDSolicitud(this.cone);
+			CRUDSolicitud solitud= new CRUDSolicitud();
 			solitud.Show();
 		}
 
