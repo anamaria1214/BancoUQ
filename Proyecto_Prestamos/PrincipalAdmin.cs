@@ -12,14 +12,22 @@ namespace Proyecto_Prestamos
 {
     public partial class PrincipalAdmin : Form
     {
-        public PrincipalAdmin()
+        Conexion cone;
+        public PrincipalAdmin(Conexion cone)
         {
+            this.cone = cone;   
             InitializeComponent();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CRUDSucursal crudSucursal= new CRUDSucursal(cone);
+            crudSucursal.Show();
         }
     }
 }

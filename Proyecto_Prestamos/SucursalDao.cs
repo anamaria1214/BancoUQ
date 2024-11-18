@@ -40,6 +40,7 @@ namespace Proyecto_Prestamos
                 
                 String consulta = "Insert into Sucursal (idSucursal, nombreSucursal, idMunicipio, direccion) " +
                     "Values('" + sucursal.getIdSucursal() + "','" + sucursal.getNombre() + "','" + sucursal.getidMunicipio() + "','" + sucursal.getDireccion() + "')";
+                
                 SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
  
 

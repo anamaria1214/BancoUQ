@@ -22,11 +22,10 @@ namespace Proyecto_Prestamos
 		[STAThread]
 		private static void Main(string[] args)
 		{
-			Conexion conexion = new Conexion();
-			Application.EnableVisualStyles();
+            Conexion conexion = Conexion.Instancia;
+            Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			MessageBox.Show("Exotico");
-			Application.Run(new FormEmpleado(conexion));
+			Application.Run(new PrincipalTesorero());
 		}
 		
 	}
