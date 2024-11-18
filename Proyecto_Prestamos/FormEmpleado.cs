@@ -20,31 +20,6 @@ namespace Proyecto_Prestamos
         private System.Windows.Forms.TextBox txtFechaNacimiento;
         private System.Windows.Forms.Button btnAgregarEmpleado;
         private System.Windows.Forms.Button btnBuscarEmpleado;
-<<<<<<< Updated upstream
-        private Label lblCargo;
-        private System.Windows.Forms.ComboBox comboBoxCargoEmpleado;
-        private Label lblSucursalEmpleado;
-        private Label lblMunicipioEncargado;
-        private System.Windows.Forms.ComboBox comboBoxSucursal;
-        private System.Windows.Forms.ComboBox comboBoxMunicipioEmpleado;
-        private Label lblSalarioEmpleado;
-        private System.Windows.Forms.Button btnEditarEmpleado;
-        private System.Windows.Forms.Button btnEliminarEmpleado;
-        private EmpleadoDao empDao;  // Objeto de tipo EmpleadoDAO para operaciones en la BD
-
-        // Constructor de FormEmpleado que recibe una instancia de MainForm
-
-
-        private Conexion conexion; // Variable para almacenar la conexión
-
-        public FormEmpleado(MainForm mainForm)
-        {
-            InitializeComponent();
-            this.conexion = mainForm.getConecte(); // Obtén la conexión desde MainForm
-        }
-
-
-=======
         private System.Windows.Forms.Button btnEditarEmpleado;
         private System.Windows.Forms.Button btnEliminarEmpleado;
         private Label lblCargo;
@@ -61,17 +36,17 @@ namespace Proyecto_Prestamos
 
         // Constructor de FormEmpleado que recibe una instancia de MainForm
         public FormEmpleado(Conexion cone)
-        {   
+        {
             InitializeComponent();  // Inicializa los componentes del formulario
             this.cone = cone;
             this.empDao = new EmpleadoDao(cone);
-           
+
         }
 
 
         public DateTime? ConvertirFecha(string fechaTexto)
         {
-          
+
             // Intenta convertir la fecha usando el formato "yyyy-MM-dd"
             if (DateTime.TryParseExact(fechaTexto, "yyyy-MM-dd",
                                        System.Globalization.CultureInfo.InvariantCulture,
@@ -87,26 +62,11 @@ namespace Proyecto_Prestamos
         }
 
 
->>>>>>> Stashed changes
 
 
         // Evento del botón para agregar un empleado
         void BtnAgregarEmpleado(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            String id, nombre, estado;
-            id = txtId.Text;  // ID del empleado
-            nombre = txtNombreEmpleado.Text;  // Nombre del empleado
-            Cargo cargo = comboBoxCargoEmpleado.SelectedItem as Cargo;  // Cargo del empleado
-            Sucursal sucursal = comboBoxSucursal.SelectedItem as Sucursal;  // Sucursal del empleado
-            Municipio nombreMunicipio = comboBoxMunicipioEmpleado.SelectedItem as Municipio;  // Municipio del empleado
-            
-            emp = new Empleado(id, nombre, cargo, sucursal, nombreMunicipio, null);  // Crea un nuevo empleado
-            MessageBox.Show("Empleado creado");
-
-            empDao = new EmpleadoDao(mfo);  // Crea una instancia de EmpleadoDAO
-            empDao.agregar(emp);  // Agrega el empleado a la base de datos
-=======
             string id = txtId.Text;
             string nombre = txtNombreEmpleado.Text;
             string fechaTexto = txtFechaNacimiento.Text;
@@ -114,7 +74,7 @@ namespace Proyecto_Prestamos
             // Convertir fecha
             DateTime? fechaNacimiento = ConvertirFecha(fechaTexto);
 
-            
+
             if (fechaNacimiento == null)
             {
                 MessageBox.Show("La fecha ingresada no es válida. Use el formato yyyy-MM-dd.", "Error");
@@ -127,7 +87,7 @@ namespace Proyecto_Prestamos
 
             // Crear el empleado solo si todos los datos son válidos
             emp = new Empleado(id, nombre, (DateTime)fechaNacimiento, cargo, idSucursal, email);
-           
+
             try
             {
                 empDao.agregarEmpleado(emp);
@@ -136,23 +96,16 @@ namespace Proyecto_Prestamos
             {
                 MessageBox.Show("Error al agregar empleado: " + ex.Message, "Error");
             }
->>>>>>> Stashed changes
         }
 
 
         // Evento del botón para buscar un empleado por su ID
         void BtnBuscarEmpleado(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            String id = txtId.Text;
-            empDao = new EmpleadoDao(mfo);
-            emp = empDao.buscarEmpleado(id);
-=======
             String id;
             id = txtId.Text;  // ID del empleado a buscar
 
             emp = empDao.buscarEmpleado(id);  // Busca el empleado en la base de datos
->>>>>>> Stashed changes
 
             if (emp == null)
             {
@@ -160,21 +113,12 @@ namespace Proyecto_Prestamos
             }
             else
             {
-<<<<<<< Updated upstream
-                txtId.Text = emp.getIdEmpleado();
-                txtNombreEmpleado.Text = emp.getNombreEmpleado();
-                comboBoxCargoEmpleado.SelectedItem = emp.getCargo();
-                comboBoxSucursal.SelectedItem = emp.getIdSucursal();
-                comboBoxMunicipioEmpleado.SelectedItem = emp.getNombreMunicipio();
-             
-=======
                 txtId.Text = emp.getIdEmpleado();  // Muestra el ID
                 txtNombreEmpleado.Text = emp.getNombreEmpleado();  // Muestra el nombre
                 txtFechaNacimiento.Text = emp.getFechaNaci().ToString();
                 txtEmail.Text = emp.getEmail();
                 txtCargo.Text = emp.getCargo();
                 txtSucursal.Text = emp.getIdSucursal();
->>>>>>> Stashed changes
             }
         }
 
@@ -210,18 +154,7 @@ namespace Proyecto_Prestamos
             }
         }
 
-<<<<<<< Updated upstream
-        // Evento del botón para listar todos los empleados
-        void BtnListarEmpleados(object sender, EventArgs e)
-        {
-            String todos = "";
-            empDao = new EmpleadoDao(mfo);  // Crea una instancia de EmpleadoDAO
-            todos = empDao.buscarTodos();  // Obtiene la lista de todos los empleados
-            MessageBox.Show(todos, "Listado de todos los empleados");
-        }
-=======
- 
->>>>>>> Stashed changes
+
 
         private void InitializeComponent()
         {
@@ -232,16 +165,6 @@ namespace Proyecto_Prestamos
             this.btnAgregarEmpleado = new System.Windows.Forms.Button();
             this.btnBuscarEmpleado = new System.Windows.Forms.Button();
             this.lblCargo = new System.Windows.Forms.Label();
-<<<<<<< Updated upstream
-            this.comboBoxCargoEmpleado = new System.Windows.Forms.ComboBox();
-            this.lblSucursalEmpleado = new System.Windows.Forms.Label();
-            this.lblMunicipioEncargado = new System.Windows.Forms.Label();
-            this.comboBoxSucursal = new System.Windows.Forms.ComboBox();
-            this.comboBoxMunicipioEmpleado = new System.Windows.Forms.ComboBox();
-            this.lblSalarioEmpleado = new System.Windows.Forms.Label();
-            this.btnEditarEmpleado = new System.Windows.Forms.Button();
-            this.btnEliminarEmpleado = new System.Windows.Forms.Button();
-=======
             this.lblSucursalEmpleado = new System.Windows.Forms.Label();
             this.lblSalarioEmpleado = new System.Windows.Forms.Label();
             this.btnEditarEmpleado = new System.Windows.Forms.Button();
@@ -252,27 +175,18 @@ namespace Proyecto_Prestamos
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.txtSucursal = new System.Windows.Forms.TextBox();
->>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // txtId
             // 
-<<<<<<< Updated upstream
-            this.txtId.Location = new System.Drawing.Point(343, 58);
-=======
             this.txtId.Location = new System.Drawing.Point(251, 91);
->>>>>>> Stashed changes
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(173, 22);
             this.txtId.TabIndex = 0;
             // 
             // txtNombreEmpleado
             // 
-<<<<<<< Updated upstream
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(343, 115);
-=======
             this.txtNombreEmpleado.Location = new System.Drawing.Point(251, 132);
->>>>>>> Stashed changes
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
             this.txtNombreEmpleado.Size = new System.Drawing.Size(173, 22);
             this.txtNombreEmpleado.TabIndex = 1;
@@ -280,11 +194,7 @@ namespace Proyecto_Prestamos
             // lblIdEmpleado
             // 
             this.lblIdEmpleado.AutoSize = true;
-<<<<<<< Updated upstream
-            this.lblIdEmpleado.Location = new System.Drawing.Point(125, 61);
-=======
             this.lblIdEmpleado.Location = new System.Drawing.Point(33, 91);
->>>>>>> Stashed changes
             this.lblIdEmpleado.Name = "lblIdEmpleado";
             this.lblIdEmpleado.Size = new System.Drawing.Size(154, 16);
             this.lblIdEmpleado.TabIndex = 2;
@@ -294,11 +204,7 @@ namespace Proyecto_Prestamos
             // lblNombreEmpleado
             // 
             this.lblNombreEmpleado.AutoSize = true;
-<<<<<<< Updated upstream
-            this.lblNombreEmpleado.Location = new System.Drawing.Point(125, 121);
-=======
             this.lblNombreEmpleado.Location = new System.Drawing.Point(33, 132);
->>>>>>> Stashed changes
             this.lblNombreEmpleado.Name = "lblNombreEmpleado";
             this.lblNombreEmpleado.Size = new System.Drawing.Size(125, 16);
             this.lblNombreEmpleado.TabIndex = 3;
@@ -307,13 +213,9 @@ namespace Proyecto_Prestamos
             // 
             // btnAgregarEmpleado
             // 
-<<<<<<< Updated upstream
-            this.btnAgregarEmpleado.Location = new System.Drawing.Point(21, 316);
-=======
             this.btnAgregarEmpleado.Location = new System.Drawing.Point(474, 79);
->>>>>>> Stashed changes
             this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
-            this.btnAgregarEmpleado.Size = new System.Drawing.Size(141, 34);
+            this.btnAgregarEmpleado.Size = new System.Drawing.Size(181, 34);
             this.btnAgregarEmpleado.TabIndex = 4;
             this.btnAgregarEmpleado.Text = "Agregar Empleado";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
@@ -321,13 +223,9 @@ namespace Proyecto_Prestamos
             // 
             // btnBuscarEmpleado
             // 
-<<<<<<< Updated upstream
-            this.btnBuscarEmpleado.Location = new System.Drawing.Point(343, 316);
-=======
             this.btnBuscarEmpleado.Location = new System.Drawing.Point(474, 264);
->>>>>>> Stashed changes
             this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
-            this.btnBuscarEmpleado.Size = new System.Drawing.Size(133, 34);
+            this.btnBuscarEmpleado.Size = new System.Drawing.Size(181, 34);
             this.btnBuscarEmpleado.TabIndex = 5;
             this.btnBuscarEmpleado.Text = "Buscar Empleado";
             this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
@@ -336,83 +234,22 @@ namespace Proyecto_Prestamos
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
-<<<<<<< Updated upstream
-            this.lblCargo.Location = new System.Drawing.Point(125, 178);
-=======
             this.lblCargo.Location = new System.Drawing.Point(33, 272);
->>>>>>> Stashed changes
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(47, 16);
             this.lblCargo.TabIndex = 6;
             this.lblCargo.Text = "Cargo:";
             this.lblCargo.Click += new System.EventHandler(this.label1_Click_1);
             // 
-<<<<<<< Updated upstream
-            // comboBoxCargoEmpleado
-            // 
-            this.comboBoxCargoEmpleado.FormattingEnabled = true;
-            this.comboBoxCargoEmpleado.Location = new System.Drawing.Point(343, 170);
-            this.comboBoxCargoEmpleado.Name = "comboBoxCargoEmpleado";
-            this.comboBoxCargoEmpleado.Size = new System.Drawing.Size(173, 24);
-            this.comboBoxCargoEmpleado.TabIndex = 7;
-            // 
-            // lblSucursalEmpleado
-            // 
-            this.lblSucursalEmpleado.AutoSize = true;
-            this.lblSucursalEmpleado.Location = new System.Drawing.Point(125, 259);
-=======
             // lblSucursalEmpleado
             // 
             this.lblSucursalEmpleado.AutoSize = true;
             this.lblSucursalEmpleado.Location = new System.Drawing.Point(33, 317);
->>>>>>> Stashed changes
             this.lblSucursalEmpleado.Name = "lblSucursalEmpleado";
             this.lblSucursalEmpleado.Size = new System.Drawing.Size(59, 16);
             this.lblSucursalEmpleado.TabIndex = 8;
             this.lblSucursalEmpleado.Text = "Sucursal";
             // 
-<<<<<<< Updated upstream
-            // lblMunicipioEncargado
-            // 
-            this.lblMunicipioEncargado.AutoSize = true;
-            this.lblMunicipioEncargado.Location = new System.Drawing.Point(125, 220);
-            this.lblMunicipioEncargado.Name = "lblMunicipioEncargado";
-            this.lblMunicipioEncargado.Size = new System.Drawing.Size(67, 16);
-            this.lblMunicipioEncargado.TabIndex = 9;
-            this.lblMunicipioEncargado.Text = "Municipio:";
-            this.lblMunicipioEncargado.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // comboBoxSucursal
-            // 
-            this.comboBoxSucursal.FormattingEnabled = true;
-            this.comboBoxSucursal.Location = new System.Drawing.Point(343, 251);
-            this.comboBoxSucursal.Name = "comboBoxSucursal";
-            this.comboBoxSucursal.Size = new System.Drawing.Size(173, 24);
-            this.comboBoxSucursal.TabIndex = 10;
-            // 
-            // comboBoxMunicipioEmpleado
-            // 
-            this.comboBoxMunicipioEmpleado.FormattingEnabled = true;
-            this.comboBoxMunicipioEmpleado.Location = new System.Drawing.Point(343, 212);
-            this.comboBoxMunicipioEmpleado.Name = "comboBoxMunicipioEmpleado";
-            this.comboBoxMunicipioEmpleado.Size = new System.Drawing.Size(173, 24);
-            this.comboBoxMunicipioEmpleado.TabIndex = 11;
-            // 
-            // lblSalarioEmpleado
-            // 
-            this.lblSalarioEmpleado.AutoSize = true;
-            this.lblSalarioEmpleado.Location = new System.Drawing.Point(125, 307);
-            this.lblSalarioEmpleado.Name = "lblSalarioEmpleado";
-            this.lblSalarioEmpleado.Size = new System.Drawing.Size(0, 20);
-            this.lblSalarioEmpleado.TabIndex = 12;
-            this.lblSalarioEmpleado.Click += new System.EventHandler(this.label1_Click_2);
-            // 
-            // btnEditarEmpleado
-            // 
-            this.btnEditarEmpleado.Location = new System.Drawing.Point(183, 316);
-            this.btnEditarEmpleado.Name = "btnEditarEmpleado";
-            this.btnEditarEmpleado.Size = new System.Drawing.Size(136, 34);
-=======
             // lblSalarioEmpleado
             // 
             this.lblSalarioEmpleado.Location = new System.Drawing.Point(0, 0);
@@ -425,7 +262,6 @@ namespace Proyecto_Prestamos
             this.btnEditarEmpleado.Location = new System.Drawing.Point(474, 199);
             this.btnEditarEmpleado.Name = "btnEditarEmpleado";
             this.btnEditarEmpleado.Size = new System.Drawing.Size(181, 34);
->>>>>>> Stashed changes
             this.btnEditarEmpleado.TabIndex = 16;
             this.btnEditarEmpleado.Text = "Editar Empleado";
             this.btnEditarEmpleado.UseVisualStyleBackColor = true;
@@ -433,26 +269,6 @@ namespace Proyecto_Prestamos
             // 
             // btnEliminarEmpleado
             // 
-<<<<<<< Updated upstream
-            this.btnEliminarEmpleado.Location = new System.Drawing.Point(498, 316);
-            this.btnEliminarEmpleado.Name = "btnEliminarEmpleado";
-            this.btnEliminarEmpleado.Size = new System.Drawing.Size(136, 34);
-            this.btnEliminarEmpleado.TabIndex = 17;
-            this.btnEliminarEmpleado.Text = "Eliminar Empleado";
-            this.btnEliminarEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // FormEmpleado
-            // 
-            this.ClientSize = new System.Drawing.Size(666, 368);
-            this.Controls.Add(this.btnEliminarEmpleado);
-            this.Controls.Add(this.btnEditarEmpleado);
-            this.Controls.Add(this.lblSalarioEmpleado);
-            this.Controls.Add(this.comboBoxMunicipioEmpleado);
-            this.Controls.Add(this.comboBoxSucursal);
-            this.Controls.Add(this.lblMunicipioEncargado);
-            this.Controls.Add(this.lblSucursalEmpleado);
-            this.Controls.Add(this.comboBoxCargoEmpleado);
-=======
             this.btnEliminarEmpleado.Location = new System.Drawing.Point(474, 132);
             this.btnEliminarEmpleado.Name = "btnEliminarEmpleado";
             this.btnEliminarEmpleado.Size = new System.Drawing.Size(181, 34);
@@ -521,7 +337,6 @@ namespace Proyecto_Prestamos
             this.Controls.Add(this.btnEditarEmpleado);
             this.Controls.Add(this.lblSalarioEmpleado);
             this.Controls.Add(this.lblSucursalEmpleado);
->>>>>>> Stashed changes
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.btnBuscarEmpleado);
             this.Controls.Add(this.btnAgregarEmpleado);
@@ -538,45 +353,26 @@ namespace Proyecto_Prestamos
 
         private void FormEmpleado_Load(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            CargarCargos();
-            CargarMunicipios();
-            comboBoxMunicipioEmpleado.SelectedIndexChanged += ComboBoxMunicipioEmpleado_SelectedIndexChanged;
-        }
-
-=======
             //CargarCargos();
 
         }
 
 
->>>>>>> Stashed changes
         private void CargarCargos()
         {
             try
             {
-<<<<<<< Updated upstream
-                using (SqlConnection conn = conexion.getCon())
-                {
-                    conn.Open();
-                    string query = "SELECT NombreCargo FROM Cargos"; // Cambia el nombre de la tabla según tu diseño
-=======
                 using (SqlConnection conn = cone.getCon())
                 {
                     conn.Open();
                     string query = "SELECT nombreCargo FROM Cargo"; // Cambia el nombre de la tabla según tu diseño
->>>>>>> Stashed changes
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-<<<<<<< Updated upstream
-                                comboBoxCargoEmpleado.Items.Add(reader["NombreCargo"].ToString());
-=======
                                 //comboBoxCargoEmpleado.Items.Add(reader["nombreCargo"].ToString());
->>>>>>> Stashed changes
                             }
                         }
                     }
@@ -588,70 +384,6 @@ namespace Proyecto_Prestamos
             }
         }
 
-<<<<<<< Updated upstream
-        private void CargarMunicipios()
-        {
-            try
-            {
-                using (SqlConnection conn = conexion.getCon())
-                {
-                    conn.Open();
-                    string query = "SELECT NombreMunicipio FROM Municipios"; // Cambia el nombre de la tabla según tu diseño
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                comboBoxMunicipioEmpleado.Items.Add(reader["NombreMunicipio"].ToString());
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error cargando municipios: {ex.Message}", "Error");
-            }
-        }
-
-        private void ComboBoxMunicipioEmpleado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string municipioSeleccionado = comboBoxMunicipioEmpleado.SelectedItem.ToString();
-            CargarSucursales(municipioSeleccionado);
-        }
-
-        private void CargarSucursales(string municipio)
-        {
-            comboBoxSucursal.Items.Clear(); // Limpia el comboBox antes de cargar datos nuevos
-            try
-            {
-                using (SqlConnection conn = conexion.getCon())
-                {
-                    conn.Open();
-                    string query = "SELECT NombreSucursal FROM Sucursales WHERE Municipio = @Municipio";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Municipio", municipio);
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                comboBoxSucursal.Items.Add(reader["NombreSucursal"].ToString());
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error cargando sucursales: {ex.Message}", "Error");
-            }
-        }
-
-
-=======
->>>>>>> Stashed changes
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -684,40 +416,6 @@ namespace Proyecto_Prestamos
 
         private void btnEditarEmpleado_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            // Obtener el ID del empleado a editar
-            string idEmpleado = txtId.Text; // Asegúrate de tener un TextBox para el ID del empleado
-
-            // Validar que el ID no esté vacío
-            if (string.IsNullOrWhiteSpace(idEmpleado))
-            {
-                MessageBox.Show("El ID del empleado es obligatorio.", "Error");
-                return;
-            }
-
-            // Obtener los datos del formulario
-            string nombreEmpleado = txtNombreEmpleado.Text;
-            Cargo cargo = comboBoxCargoEmpleado.SelectedItem as Cargo;  // Cargo del empleado
-            Sucursal sucursal = comboBoxSucursal.SelectedItem as Sucursal;  // Sucursal del empleado
-            Municipio nombreMunicipio = comboBoxMunicipioEmpleado.SelectedItem as Municipio;  // Municipio del empleado
-
-            // Crear el objeto Empleado
-            Empleado emp = new Empleado(idEmpleado, nombreEmpleado, cargo, sucursal, nombreMunicipio, null);
-
-            // Crear una instancia de EmpleadoDao
-            EmpleadoDao empleadoDao = new EmpleadoDao(this);
-
-            // Llamar al método editar
-            if (empleadoDao.editar(emp))
-            {
-                MessageBox.Show("Empleado editado exitosamente", "Éxito");
-            }
-            else
-            {
-                MessageBox.Show("Error al editar empleado.", "Error");
-            }
-
-=======
             string id = txtId.Text;
             string nombre = txtNombreEmpleado.Text;
             string cargo = txtCargo.Text;
@@ -735,7 +433,6 @@ namespace Proyecto_Prestamos
             {
                 MessageBox.Show("Fecha de nacimiento inválida.");
             }
->>>>>>> Stashed changes
             // Limpiar los campos después de editar
             LimpiarCampos();
         }
@@ -745,28 +442,20 @@ namespace Proyecto_Prestamos
         {
             txtId.Clear();
             txtNombreEmpleado.Clear();
-<<<<<<< Updated upstream
-            comboBoxCargoEmpleado = null;
-            comboBoxSucursal = null;
-            comboBoxMunicipioEmpleado = null;
-        }
-
-=======
             txtCargo.Clear();
             txtSucursal.Clear();
             txtFechaNacimiento.Clear();
-            txtEmail.Clear();   
+            txtEmail.Clear();
 
         }
 
-      
+
 
         private void label1_Click_3(object sender, EventArgs e)
         {
 
         }
 
-       
->>>>>>> Stashed changes
+
     }
 }

@@ -67,3 +67,5 @@ C:\Users\galvi\BasesDatos-I\ProyectoPrestamos.Nuevo\BancoUQ\Proyecto_Prestamos\o
 C:\Users\galvi\BasesDatos-I\ProyectoPrestamos.Nuevo\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.exe
 C:\Users\galvi\BasesDatos-I\ProyectoPrestamos.Nuevo\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.pdb
 >>>>>>> Stashed changes
+C:\Users\galvi\BasesDatos-I\ProyectoPrestamos.Nuevo\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.PrinTesoreria.resources
+C:\Users\galvi\BasesDatos-I\ProyectoPrestamos.Nuevo\BancoUQ\Proyecto_Prestamos\obj\Debug\Proyecto_Prestamos.Properties.Resources.resources

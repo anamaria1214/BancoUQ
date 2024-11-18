@@ -1,37 +1,25 @@
 ﻿using System;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Proyecto_Prestamos
 {
-	public class Empleado
-	{
-<<<<<<< Updated upstream
-        private String idEmpleado, nombreEmpleado, estado;
-        private Cargo cargo;
-        private Sucursal idSucursal;
-        private Municipio nombreMunicipio;
-		public Empleado(String idEmpleado, String nombreEmpleado, Cargo cargo, Sucursal idSucursal, Municipio nombreMunicipio,String estado)
-=======
-		private String idEmpleado, nombreEmpleado, cargo, idSucursal, email;
+    public class Empleado
+    {
+        private String idEmpleado, nombreEmpleado, cargo, idSucursal, email;
         private DateTime fechaNaci;
         //Salario derivado
-		public Empleado(String idEmpleado, String nombreEmpleado, DateTime fechaNaci,String idSucursal, String cargo, String email)
->>>>>>> Stashed changes
-		{
-			this.idEmpleado=idEmpleado;
-			this.nombreEmpleado=nombreEmpleado;
-			this.cargo=cargo;
-			this.idSucursal=idSucursal;
-<<<<<<< Updated upstream
-			this.nombreMunicipio= nombreMunicipio;
-            this.estado = estado;
-=======
-            this.fechaNaci =fechaNaci;
-            this.email=email;
-		}
+        public Empleado(String idEmpleado, String nombreEmpleado, DateTime fechaNaci, String idSucursal, String cargo, String email)
+        {
+            this.idEmpleado = idEmpleado;
+            this.nombreEmpleado = nombreEmpleado;
+            this.cargo = cargo;
+            this.idSucursal = idSucursal;
+            this.fechaNaci = fechaNaci;
+            this.email = email;
+        }
         public Empleado()
         {
 
->>>>>>> Stashed changes
         }
 
         public string getIdEmpleado()
@@ -54,49 +42,26 @@ namespace Proyecto_Prestamos
             this.nombreEmpleado = nombreEmpleado;
         }
 
-        public Cargo getCargo()
+        public string getCargo()
         {
             return cargo;
         }
 
-        public void setCargo(Cargo cargo)
+        public void setCargo(string cargo)
         {
             this.cargo = cargo;
         }
 
-        public Sucursal getIdSucursal()
+        public string getIdSucursal()
         {
             return idSucursal;
         }
 
-        public void setIdSucursal(Sucursal idSucursal)
+        public void setIdSucursal(string idSucursal)
         {
             this.idSucursal = idSucursal;
         }
 
-<<<<<<< Updated upstream
-        public Municipio getNombreMunicipio()
-        {
-            return nombreMunicipio;
-        }
-
-        public void setNombreMunicipio(Municipio nombreMunicipio)
-        {
-            this.nombreMunicipio = nombreMunicipio;
-        }
-
-        public string getEstado()
-        {
-            return estado;
-        }
-
-        public void setEstado(string estado)
-        {
-            this.estado = estado;
-        }
-
-       
-=======
         public string getEmail()
         {
             return email;
@@ -112,7 +77,6 @@ namespace Proyecto_Prestamos
             return fechaNaci;
         }
 
->>>>>>> Stashed changes
         public void solicitarPrestamo(float monto, int periodo)
         {
             Console.WriteLine("Solicitud de préstamo realizada por el empleado {0} para un monto de {1} a {2} meses.", nombreEmpleado, monto, periodo);
@@ -130,8 +94,8 @@ namespace Proyecto_Prestamos
             Console.WriteLine("Informe de pago de cuota {0} del préstamo {1} por {2}. Fecha de pago: {3}.", numCuota, idPrestamo, valor, fechaPago.ToShortDateString());
 
         }
-	}
-	
-	
-	
+    }
+
+
+
 }

@@ -25,13 +25,8 @@ namespace Proyecto_Prestamos
 			Conexion conexion = new Conexion();
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
-			Application.Run(new VentanaInicio());
 			MessageBox.Show("Exotico");
-=======
 			Application.Run(new FormEmpleado(conexion));
-			
->>>>>>> Stashed changes
 		}
 		
 	}
