@@ -14,15 +14,20 @@ namespace Proyecto_Prestamos
 		Conexion cone;
 		EmpleadoDao empleadoDao;
 		Empleado empleado;
+        PrestamoDao prestamoDao;
+        private string selecPrestamo = "0";
         UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
 
 		public PrincipalEmpleado(Conexion cone1, string nombreUusario)
 		{
             this.cone = cone1;
             empleadoDao = new EmpleadoDao(cone1);
+            this.prestamoDao = new PrestamoDao();
 			this.empleado= empleadoDao.buscarEmpleado(nombreUusario);
             InitializeComponent();
-			instanciarSingleton(nombreUusario);
+            pintarPrestamos();
+            instanciarSingleton(nombreUusario);
+
 			
 		}
 		void instanciarSingleton(string nombreUusario)
@@ -32,6 +37,24 @@ namespace Proyecto_Prestamos
                 usuario.establecerCuenta(nombreUusario);
                 usuario.establecerFechaInicio(DateTime.Now);
 
+        }
+
+        private void pintarPrestamos()
+        {
+            List<Prestamo> prestamos = prestamoDao.ObtenerPrestamosPorEmpleado(usuario.empleado.getIdEmpleado());
+            tablaPrestamos.Rows.Clear();
+            foreach (var prestamo in prestamos)
+            {
+                tablaPrestamos.Rows.Add(
+                    prestamo.monto,
+                    prestamo.periodoMeses,
+                    prestamo.tasaInteres,
+                    prestamo.fechaInicio.ToShortDateString(),
+                    prestamo.monto/ prestamo.periodoMeses,
+                    prestamo.idEmpleado,
+                    prestamo.idSolicitud
+                    );
+            }
         }
         void Label1Click(object sender, EventArgs e)
 		{
@@ -107,5 +130,15 @@ namespace Proyecto_Prestamos
         {
             string consulta= "SELECT * FROM Prestamo where id"
         }*/
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow filaSeleccionada = tablaPrestamos.Rows[e.RowIndex];
+
+                selecPrestamo = filaSeleccionada.Cells[5].Value.ToString(); // Por índice
+            }
+        }
     }
 }

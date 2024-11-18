@@ -30,12 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablaAuditoria = new System.Windows.Forms.DataGridView();
+            this.idCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaAuditoria)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -44,7 +45,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 56);
+            this.panel1.Size = new System.Drawing.Size(443, 56);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -52,50 +53,57 @@
             this.label1.BackColor = System.Drawing.Color.DodgerBlue;
             this.label1.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label1.Location = new System.Drawing.Point(101, 13);
+            this.label1.Location = new System.Drawing.Point(158, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 32);
+            this.label1.Size = new System.Drawing.Size(120, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Auditoría";
             // 
-            // dataGridView1
+            // tablaAuditoria
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.empleado,
-            this.fechaEntrada,
+            this.tablaAuditoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaAuditoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCuenta,
+            this.nombreEmpleado,
+            this.fechaIngreso,
             this.fechaSalida});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(340, 232);
-            this.dataGridView1.TabIndex = 2;
+            this.tablaAuditoria.Location = new System.Drawing.Point(12, 87);
+            this.tablaAuditoria.Name = "tablaAuditoria";
+            this.tablaAuditoria.Size = new System.Drawing.Size(443, 228);
+            this.tablaAuditoria.TabIndex = 2;
+            this.tablaAuditoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // empleado
+            // idCuenta
             // 
-            this.empleado.HeaderText = "Empleado";
-            this.empleado.Name = "empleado";
+            this.idCuenta.HeaderText = "Cuenta";
+            this.idCuenta.Name = "idCuenta";
             // 
-            // fechaEntrada
+            // nombreEmpleado
             // 
-            this.fechaEntrada.HeaderText = "Fecha de entrada";
-            this.fechaEntrada.Name = "fechaEntrada";
+            this.nombreEmpleado.HeaderText = "Empleado";
+            this.nombreEmpleado.Name = "nombreEmpleado";
+            // 
+            // fechaIngreso
+            // 
+            this.fechaIngreso.HeaderText = "Fecha de ingreso";
+            this.fechaIngreso.Name = "fechaIngreso";
             // 
             // fechaSalida
             // 
-            this.fechaSalida.HeaderText = "Fecha de entrada";
+            this.fechaSalida.HeaderText = "Fecha de salida";
             this.fechaSalida.Name = "fechaSalida";
             // 
             // VistaAuditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 327);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(468, 327);
+            this.Controls.Add(this.tablaAuditoria);
             this.Controls.Add(this.panel1);
             this.Name = "VistaAuditoria";
             this.Text = "VistaAuditoria";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaAuditoria)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -104,9 +112,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaEntrada;
+        private System.Windows.Forms.DataGridView tablaAuditoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaIngreso;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaSalida;
     }
 }

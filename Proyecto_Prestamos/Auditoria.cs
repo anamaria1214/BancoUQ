@@ -18,6 +18,29 @@ namespace Proyecto_Prestamos
             this.fechaIngreso = fechaIngreso;
             this.fechaSalida = fechaSalida;
         }
+        public string IdCuenta
+        {
+            get { return idCuenta; }
+            set { idCuenta = value; }
+        }
+
+        public string NombreEmpleado
+        {
+            get { return nombreEmpleado; }
+            set { nombreEmpleado = value; }
+        }
+
+        public DateTime FechaIngreso
+        {
+            get { return fechaIngreso; }
+            set { fechaIngreso = value; }
+        }
+
+        public DateTime FechaSalida
+        {
+            get { return fechaSalida; }
+            set { fechaSalida = value; }
+        }
 
     }
 }
