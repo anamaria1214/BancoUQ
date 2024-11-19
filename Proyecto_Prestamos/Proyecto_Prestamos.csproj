@@ -38,6 +38,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -57,19 +63,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cargo.cs" />
+    <Compile Include="Auditoria.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="CorreoNotificacion.cs" />
+    <Compile Include="CRUDSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDSolicitud.Designer.cs">
+      <DependentUpon>CRUDSolicitud.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUDSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CRUDSucursal.Designer.cs">
       <DependentUpon>CRUDSucursal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empleado.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="Cuenta.cs" />
+    <Compile Include="CuentaDao.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="EmpleadoDao.cs" />
     <Compile Include="FormEmpleado.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporte.Designer.cs">
+      <DependentUpon>FormReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
@@ -89,14 +109,13 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Municipio.cs" />
     <Compile Include="Nivel.cs" />
     <Compile Include="Prestamo.cs" />
-    <Compile Include="PrincipalAdministrador.cs">
+    <Compile Include="PrincipalAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrincipalAdministrador.Designer.cs">
-      <DependentUpon>PrincipalAdministrador.cs</DependentUpon>
+    <Compile Include="PrincipalAdmin.Designer.cs">
+      <DependentUpon>PrincipalAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="PrincipalEmpleado.cs">
       <SubType>Form</SubType>
@@ -104,35 +123,41 @@
     <Compile Include="PrincipalEmpleado.Designer.cs">
       <DependentUpon>PrincipalEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrinTesoreria.cs">
+    <Compile Include="PrincipalTesorero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrinTesoreria.Designer.cs">
-      <DependentUpon>PrinTesoreria.cs</DependentUpon>
+    <Compile Include="PrincipalTesorero.Designer.cs">
+      <DependentUpon>PrincipalTesorero.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Solicitud.cs" />
     <Compile Include="SolicitudDao.cs" />
     <Compile Include="Sucursal.cs" />
     <Compile Include="SucursalDao.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioSesion.cs" />
     <Compile Include="VentanaSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VentanaSolicitud.Designer.cs">
       <DependentUpon>VentanaSolicitud.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaAuditoria.Designer.cs">
+      <DependentUpon>VistaAuditoria.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CRUDSolicitud.resx">
+      <DependentUpon>CRUDSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUDSucursal.resx">
       <DependentUpon>CRUDSucursal.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,25 +170,21 @@
     <EmbeddedResource Include="InicioUsuario.resx">
       <DependentUpon>InicioUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalAdmin.resx">
+      <DependentUpon>PrincipalAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrincipalEmpleado.resx">
       <DependentUpon>PrincipalEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrinTesoreria.resx">
-      <DependentUpon>PrinTesoreria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="PrincipalTesorero.resx">
+      <DependentUpon>PrincipalTesorero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaSolicitud.resx">
       <DependentUpon>VentanaSolicitud.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\png-transparent-user-computer-icons-user-miscellaneous-cdr-rectangle-thumbnail.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\profileIcon.png" />
+    <EmbeddedResource Include="VistaAuditoria.resx">
+      <DependentUpon>VistaAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

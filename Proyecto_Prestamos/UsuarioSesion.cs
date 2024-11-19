@@ -12,6 +12,8 @@ namespace Proyecto_Prestamos
         private static UsuarioSesion instancia;
 
         public Empleado empleado { get; private set; }
+        public string cuenta {  get; set; }
+        public DateTime fechaInicio { get; set; }
 
         private UsuarioSesion(Empleado empleado) {
             this.empleado = empleado;
@@ -29,6 +31,15 @@ namespace Proyecto_Prestamos
         public void establecerUsuario(Empleado empleado)
         {
             this.empleado = empleado;
+        }
+        public void establecerCuenta(string cuenta)
+        {
+            this.cuenta = cuenta;
+        }
+
+        public void establecerFechaInicio(DateTime fecha)
+        {
+            this.fechaInicio = fecha;
         }
 
         public void limpiarSesion()

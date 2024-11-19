@@ -11,11 +11,15 @@ namespace Proyecto_Prestamos
         private MainForm mfo;
         private FormEmpleado crudEmpleado;
         private Conexion cone;
+        private CuentaDao cuentaDao;
 
         public EmpleadoDao(Conexion cone)
         {
+            this.cuentaDao = new CuentaDao(cone);
             this.cone = cone;
         }
+
+
         public EmpleadoDao(FormEmpleado crudEmpleado)
         {
             this.crudEmpleado = crudEmpleado;
@@ -45,6 +49,28 @@ namespace Proyecto_Prestamos
             return flag;
         }
 
+        public string retornarTipo(string nombreUsuario)
+        {
+            string consulta = "select * from CuentaUsuario where nombreUsuario= " + nombreUsuario;
+            string tipo = "";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    tipo = reader.GetString(3);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar el tipo de cuenta: " + ex);
+            }
+            return tipo;
+        }
+
         public void agregarEmpleado(Empleado emp)
         {
             try
@@ -63,6 +89,17 @@ namespace Proyecto_Prestamos
                 cmd.Parameters.AddWithValue("@idSucursal", emp.getIdSucursal());
                 cmd.Parameters.AddWithValue("@idCargo", emp.getCargo());
                 cmd.Parameters.AddWithValue("@email", emp.getEmail());
+
+                string idCuentaUsuario = emp.getIdEmpleado(); // Regla: usar el mismo ID
+                string nombreUsuario = emp.getEmail();
+                string contraseña = emp.getIdEmpleado(); // Contraseña inicial
+                string idTipo = "1"; // Por ejemplo, tipo empleado
+
+                Cuenta cuenta = new Cuenta(idCuentaUsuario, nombreUsuario, contraseña, idTipo);
+                cuentaDao.agregarCuenta(cuenta);
+
+                MessageBox.Show("Empleado y cuenta agregados exitosamente.", "Éxito");
+                MessageBox.Show("El usuario es: " + idCuentaUsuario + " Y la constraseña es: " + contraseña);
 
                 // Ejecutar el comando
                 cmd.ExecuteNonQuery();

@@ -12,8 +12,10 @@ namespace Proyecto_Prestamos
 {
     public partial class PrincipalTesorero : Form
     {
-        public PrincipalTesorero()
+        Conexion conexion;
+        public PrincipalTesorero(Conexion cone)
         {
+            this.conexion= cone;
             InitializeComponent();
         }
 
