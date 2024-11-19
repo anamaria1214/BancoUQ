@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioriaDao.cs" />
     <Compile Include="Auditoria.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="CorreoNotificacion.cs" />

@@ -3,24 +3,26 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Proyecto_Prestamos
 {
-	public class Empleado
-	{
-		private String idEmpleado, nombreEmpleado, cargo, idSucursal;
+    public class Empleado
+    {
+        private String idEmpleado, nombreEmpleado, cargo, idSucursal, email;
         private DateTime fechaNaci;
         //Salario derivado
-		public Empleado(String idEmpleado, String nombreEmpleado, DateTime fechaNaci,String idSucursal, String cargo)
-		{
-			this.idEmpleado=idEmpleado;
-			this.nombreEmpleado=nombreEmpleado;
-			this.cargo=cargo;
-			this.idSucursal=idSucursal;
-		}
+        public Empleado(String idEmpleado, String nombreEmpleado, DateTime fechaNaci, String idSucursal, String cargo, String email)
+        {
+            this.idEmpleado = idEmpleado;
+            this.nombreEmpleado = nombreEmpleado;
+            this.cargo = cargo;
+            this.idSucursal = idSucursal;
+            this.fechaNaci = fechaNaci;
+            this.email = email;
+        }
         public Empleado()
         {
 
         }
-		
-		 public string getIdEmpleado()
+
+        public string getIdEmpleado()
         {
             return idEmpleado;
         }
@@ -60,8 +62,21 @@ namespace Proyecto_Prestamos
             this.idSucursal = idSucursal;
         }
 
-        
-        
+        public string getEmail()
+        {
+            return email;
+        }
+
+        public void setEmail(string email)
+        {
+            this.email = email;
+        }
+
+        public DateTime getFechaNaci()
+        {
+            return fechaNaci;
+        }
+
         public void solicitarPrestamo(float monto, int periodo)
         {
             Console.WriteLine("Solicitud de préstamo realizada por el empleado {0} para un monto de {1} a {2} meses.", nombreEmpleado, monto, periodo);
@@ -79,8 +94,8 @@ namespace Proyecto_Prestamos
             Console.WriteLine("Informe de pago de cuota {0} del préstamo {1} por {2}. Fecha de pago: {3}.", numCuota, idPrestamo, valor, fechaPago.ToShortDateString());
 
         }
-	}
-	
-	
-	
+    }
+
+
+
 }

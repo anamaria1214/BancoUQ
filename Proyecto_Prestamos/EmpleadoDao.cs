@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Security.Policy;
 using System.Windows.Forms;
@@ -8,22 +9,27 @@ namespace Proyecto_Prestamos
     public class EmpleadoDao
     {
         private MainForm mfo;
-        Conexion cone;
+        private FormEmpleado crudEmpleado;
+        private Conexion cone;
+        private CuentaDao cuentaDao;
 
         public EmpleadoDao(Conexion cone)
         {
+            this.cuentaDao = new CuentaDao(cone);
             this.cone = cone;
         }
 
-        public EmpleadoDao(MainForm mfo)
+
+        public EmpleadoDao(FormEmpleado crudEmpleado)
         {
-            this.mfo = mfo;
+            this.crudEmpleado = crudEmpleado;
         }
+
 
         public bool login(string nombreUsuario, string contraseña)
         {
             bool flag = false;
-            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = "+nombreUsuario+" AND contraseña = "+contraseña;
+            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = " + nombreUsuario + " AND contraseña = " + contraseña;
             try
             {
                 SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
@@ -65,25 +71,46 @@ namespace Proyecto_Prestamos
             return tipo;
         }
 
-
-
-
-        /*public void agregar(Empleado emp)
+        public void agregarEmpleado(Empleado emp)
         {
             try
             {
-                SqlCommand cmd = mfo.getConecte().getCon().CreateCommand();
-                cmd.CommandText = "Insert into Empleado (idEmpleado, nombreEmpleado, cargo, idSucursal, nombreMunicipio, estado) " +
-                    "Values('" + emp.getIdEmpleado() + "','" + emp.getNombreEmpleado() + "','" + emp.getCargo() + "','" + emp.getIdSucursal() + "','" + emp.getNombreMunicipio() + "','" + emp.getEstado() + "')";
-                cmd.Connection = mfo.getConecte().getCon();
+                // Crear el comando SQL
+                string consulta = "INSERT INTO Empleado (idEmpleado, nombre, fechaNacimiento, idSucursal, idCargo, email) " +
+                                  "VALUES (@idEmpleado, @nombre, @fechaNacimiento, @idSucursal, @idCargo, @email)";
+
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+
+                MessageBox.Show("Empleado email: " + emp.getEmail());
+                // Asignar los parámetros al comando
+                cmd.Parameters.AddWithValue("@idEmpleado", emp.getIdEmpleado());
+                cmd.Parameters.AddWithValue("@nombre", emp.getNombreEmpleado());
+                cmd.Parameters.AddWithValue("@fechaNacimiento", emp.getFechaNaci().ToString("yyyy-MM-dd"));  // Asegúrate de tener un getter para la fecha
+                cmd.Parameters.AddWithValue("@idSucursal", emp.getIdSucursal());
+                cmd.Parameters.AddWithValue("@idCargo", emp.getCargo());
+                cmd.Parameters.AddWithValue("@email", emp.getEmail());
+
+                string idCuentaUsuario = emp.getIdEmpleado(); // Regla: usar el mismo ID
+                string nombreUsuario = emp.getEmail();
+                string contraseña = emp.getIdEmpleado(); // Contraseña inicial
+                string idTipo = "1"; // Por ejemplo, tipo empleado
+
+                Cuenta cuenta = new Cuenta(idCuentaUsuario, nombreUsuario, contraseña, idTipo);
+                cuentaDao.agregarCuenta(cuenta);
+
+                MessageBox.Show("Empleado y cuenta agregados exitosamente.", "Éxito");
+                MessageBox.Show("El usuario es: " + idCuentaUsuario + " Y la constraseña es: " + contraseña);
+
+                // Ejecutar el comando
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Empleado agregado exitosamente", "Atención!");
+
+                MessageBox.Show("Empleado agregado exitosamente.", "Atención");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al agregar empleado: " + ex.Message, "Error");
             }
-        }*/
+        }
 
         public string buscarTodos()
         {
@@ -113,7 +140,7 @@ namespace Proyecto_Prestamos
         public Empleado hallarEmpleadoPorCuenta(string usuario)
         {
             Empleado emp = null;
-            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = "+usuario;
+            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = " + usuario;
 
             try
             {
@@ -123,11 +150,11 @@ namespace Proyecto_Prestamos
                 {
                     string id = reader.GetString(0); // Usa los métodos de tipo correcto
                     string nombre = reader.GetString(1);
-                    DateTime fechaNacimiento= reader.GetDateTime(2);
-                    string idSucursal= reader.GetString(3);
-                    string idCargo= reader.GetString(4);
-
-                    emp = new Empleado(id, nombre, fechaNacimiento, idSucursal, idCargo);
+                    DateTime fechaNacimiento = reader.GetDateTime(2);
+                    string idSucursal = reader.GetString(3);
+                    string idCargo = reader.GetString(4);
+                    string email = reader.GetString(5);
+                    emp = new Empleado(id, nombre, fechaNacimiento, idSucursal, idCargo, email);
                 }
 
                 reader.Close();
@@ -158,8 +185,9 @@ namespace Proyecto_Prestamos
                     DateTime fechaNacimiento = reader.GetDateTime(2);
                     string idSucursal = reader.GetString(3);
                     string idCargo = reader.GetString(4);
+                    string email = reader.IsDBNull(5) ? "na" : reader.GetString(5);
 
-                    emp = new Empleado(id, nombre, fechaNacimiento, idSucursal, idCargo);
+                    emp = new Empleado(id, nombre, fechaNacimiento, idSucursal, idCargo, email);
                 }
                 reader.Close();
             }
@@ -171,19 +199,29 @@ namespace Proyecto_Prestamos
 
             return emp;
         }
-
-        /*public bool editar(Empleado emp)
+        public bool editarEmpleado(Empleado emp)
         {
             bool resultado = false;
-            string consulta = "update Empleado set nombreEmpleado = '" + emp.getNombreEmpleado() + "', cargo = '" + emp.getCargo() + "', " +
-                "idSucursal = '" + emp.getIdSucursal() + "', nombreMunicipio = '" + emp.getNombreMunicipio() + "', estado = '" + emp.getEstado() + "' " +
-                "where idEmpleado = '" + emp.getIdEmpleado() + "'";
-
             try
             {
-                SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
+                string consulta = "UPDATE Empleado " +
+                                  "SET nombre = @nombre, fechaNacimiento = @fechaNacimiento, idSucursal = @idSucursal, idCargo = @idCargo, email = @email " +
+                                  "WHERE idEmpleado = @idEmpleado";
+
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+
+
+                cmd.Parameters.AddWithValue("@idEmpleado", emp.getIdEmpleado());
+                cmd.Parameters.AddWithValue("@nombre", emp.getNombreEmpleado());
+                cmd.Parameters.AddWithValue("@fechaNacimiento", emp.getFechaNaci());
+                cmd.Parameters.AddWithValue("@idSucursal", emp.getIdSucursal());
+                cmd.Parameters.AddWithValue("@idCargo", emp.getCargo());
+                cmd.Parameters.AddWithValue("@email", emp.getEmail());
+
                 cmd.ExecuteNonQuery();
                 resultado = true;
+
+                MessageBox.Show("Empleado editado exitosamente.", "Atención");
             }
             catch (Exception ex)
             {
@@ -191,7 +229,12 @@ namespace Proyecto_Prestamos
             }
 
             return resultado;
-        }*/
+        }
+
+
+
+
+
 
         public bool eliminar(Empleado emp)
         {
@@ -200,9 +243,10 @@ namespace Proyecto_Prestamos
 
             try
             {
-                SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
                 cmd.ExecuteNonQuery();
                 resultado = true;
+                MessageBox.Show("Empleado eliminado correctamente");
             }
             catch (Exception ex)
             {
