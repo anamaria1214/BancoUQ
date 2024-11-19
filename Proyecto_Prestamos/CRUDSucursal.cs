@@ -46,11 +46,11 @@ namespace Proyecto_Prestamos
 
         private void button1_Click(object sender, EventArgs e)
         {
-                sucursal = new Sucursal(idSucursal.Text, nombreSucursal.Text, direccionSucursal.Text, "1");
-          
-                sucursalDao.agregarSucursal(sucursal);
-               
-            }
+            sucursal = new Sucursal(idSucursal.Text, nombreSucursal.Text, direccionSucursal.Text, "1");
+
+            sucursalDao.agregarSucursal(sucursal);
+
+        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace Proyecto_Prestamos
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnEditar_Click_1(object sender, EventArgs e)
@@ -94,5 +94,5 @@ namespace Proyecto_Prestamos
             }
         }
     }
-    
+
 }

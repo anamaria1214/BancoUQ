@@ -73,6 +73,8 @@
     <Compile Include="CRUDSucursal.Designer.cs">
       <DependentUpon>CRUDSucursal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cuenta.cs" />
+    <Compile Include="CuentaDao.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="EmpleadoDao.cs" />
     <Compile Include="FormEmpleado.cs">

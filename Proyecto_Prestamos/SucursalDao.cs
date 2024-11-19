@@ -37,12 +37,12 @@ namespace Proyecto_Prestamos
         {
             try
             {
-                
+
                 String consulta = "Insert into Sucursal (idSucursal, nombreSucursal, idMunicipio, direccion) " +
                     "Values('" + sucursal.getIdSucursal() + "','" + sucursal.getNombre() + "','" + sucursal.getidMunicipio() + "','" + sucursal.getDireccion() + "')";
-                
+
                 SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
- 
+
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Sucursal agregada exitosamente", "Atención!");
@@ -97,7 +97,7 @@ namespace Proyecto_Prestamos
                     string nombre = reader.GetValue(1).ToString();
                     string idMunicipio = reader.GetValue(2).ToString();
                     string direccion = reader.GetValue(3).ToString();
-                    sucursal = new Sucursal(id, nombre,  direccion, idMunicipio);
+                    sucursal = new Sucursal(id, nombre, direccion, idMunicipio);
                 }
                 reader.Close();
             }

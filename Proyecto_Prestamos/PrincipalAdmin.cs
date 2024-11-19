@@ -29,5 +29,11 @@ namespace Proyecto_Prestamos
             CRUDSucursal crudSucursal= new CRUDSucursal(cone);
             crudSucursal.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormEmpleado formEmpleado= new FormEmpleado(cone);  
+            formEmpleado.Show();
+        }
     }
 }

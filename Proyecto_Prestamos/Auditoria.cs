@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Prestamos
 {
-    internal class Auditoria
+    public class Auditoria
     {
         string idCuenta;
         string nombreEmpleado;

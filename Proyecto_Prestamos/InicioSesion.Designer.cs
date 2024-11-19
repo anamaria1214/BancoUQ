@@ -81,7 +81,6 @@ namespace Proyecto_Prestamos
             this.idUsuario.Name = "idUsuario";
             this.idUsuario.Size = new System.Drawing.Size(364, 22);
             this.idUsuario.TabIndex = 1;
-            this.idUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 

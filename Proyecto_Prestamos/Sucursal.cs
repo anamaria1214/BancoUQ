@@ -21,12 +21,12 @@ namespace Proyecto_Prestamos
 
         public string getIdSucursal()
         {
-            return idSucursal; 
+            return idSucursal;
         }
 
         public string getNombre()
         {
-           return nombre; 
+            return nombre;
         }
 
         public string getidMunicipio()
