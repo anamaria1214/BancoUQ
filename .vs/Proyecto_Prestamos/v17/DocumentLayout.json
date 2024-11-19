@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\vistaauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\auditoriadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\auditoriadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\auditoriadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,15 +19,15 @@
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\principalempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\prestamodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\prestamodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\prestamodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\vistaauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\vistaauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\vistaauditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|c:\\users\\anamaria\\downloads\\proyectoprestamos-main\\proyectoprestamos-main\\proyecto_prestamos\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\proyecto_prestamos\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BE26181-C5D2-44D8-A0E0-0D5ADD9810E3}|Proyecto_Prestamos\\Proyecto_Prestamos.csproj|solutionrelative:proyecto_prestamos\\auditoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -93,6 +93,14 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AuditoriaDao.cs",
@@ -102,16 +110,7 @@
               "RelativeToolTip": "Proyecto_Prestamos\\AuditoriaDao.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAUwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T03:23:04.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "WhenOpened": "2024-11-18T03:23:04.583Z"
             },
             {
               "$type": "Document",
@@ -135,8 +134,7 @@
               "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\VistaAuditoria.cs [Dise\u00F1o]",
               "RelativeToolTip": "Proyecto_Prestamos\\VistaAuditoria.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:57:49.787Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-18T02:57:49.787Z"
             },
             {
               "$type": "Document",
@@ -148,8 +146,7 @@
               "RelativeToolTip": "Proyecto_Prestamos\\PrestamoDao.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAEgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:20:43.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T02:20:43.903Z"
             },
             {
               "$type": "Document",
@@ -160,8 +157,7 @@
               "ToolTip": "C:\\Users\\ANAMARIA\\Downloads\\ProyectoPrestamos-main\\ProyectoPrestamos-main\\Proyecto_Prestamos\\PrincipalEmpleado.cs [Dise\u00F1o]",
               "RelativeToolTip": "Proyecto_Prestamos\\PrincipalEmpleado.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T02:43:54.062Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-17T02:43:54.062Z"
             },
             {
               "$type": "Document",
@@ -173,8 +169,7 @@
               "RelativeToolTip": "Proyecto_Prestamos\\PrincipalEmpleado.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T02:43:58.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T02:43:58.09Z"
             },
             {
               "$type": "Document",
@@ -186,8 +181,7 @@
               "RelativeToolTip": "Proyecto_Prestamos\\Auditoria.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwA0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:57:57.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T02:57:57.137Z"
             },
             {
               "$type": "Document",
