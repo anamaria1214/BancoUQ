@@ -16,7 +16,7 @@ namespace Proyecto_Prestamos
         public VentanaInicio(Conexion con)
 		{
 			this.cone = con;
-			this.empleadoDao= new EmpleadoDao(cone);
+			this.empleadoDao= new EmpleadoDao();
 			this.correo= new CorreoNotificacion();
 			InitializeComponent();
 			
@@ -46,7 +46,7 @@ namespace Proyecto_Prestamos
 			{
 				if (loginA == "1")
 				{
-					PrincipalTesorero principal = new PrincipalTesorero(cone);
+					PrincipalTesorero principal = new PrincipalTesorero();
 					principal.Show();
 				}else if(loginA == "2")
 				{
@@ -55,7 +55,6 @@ namespace Proyecto_Prestamos
 				}
 				else
 				{
-                    correo.enviarCorreo("nidiagiraldomontes@gmail.com", "Ingreso a BancoUQ", "Bienvenido a nuestra aplicación");
                     PrincipalEmpleado principalEmpl = new PrincipalEmpleado(cone, loginA);
                     principalEmpl.Show();
                     MessageBox.Show("Usuario si encontrado");

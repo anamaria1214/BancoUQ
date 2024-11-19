@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="Nivel.cs" />
     <Compile Include="Prestamo.cs" />
+    <Compile Include="PrestamoDao1.cs" />
     <Compile Include="PrincipalAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -19,7 +19,7 @@ namespace Proyecto_Prestamos
         public CRUDSolicitud(Conexion cone)
         {
             this.cone = cone;
-            this.solicitudDao = new SolicitudDao(cone);
+            this.solicitudDao = new SolicitudDao();
             InitializeComponent();
             
         }

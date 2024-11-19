@@ -20,13 +20,15 @@ namespace Proyecto_Prestamos
         public PrincipalEmpleado(Conexion cone1, string nombreUusario)
 		{
             this.cone = cone1;
-            empleadoDao = new EmpleadoDao(cone1);
-			this.empleado= empleadoDao.buscarEmpleado(nombreUusario);
-            LlenarDataGridView();
+            empleadoDao = new EmpleadoDao();
+            this.empleado = empleadoDao.hallarEmpleadoPorCuenta(nombreUusario);
+                        
             InitializeComponent();
 			instanciarSingleton(nombreUusario);
-			
-		}
+
+            llenarDataGridView();
+
+        }
 		void instanciarSingleton(string nombreUusario)
 		{
                 UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
@@ -82,10 +84,11 @@ namespace Proyecto_Prestamos
             }
         }
 
-        private void LlenarDataGridView()
+        private void llenarDataGridView()
         {
+            MessageBox.Show("" + empleado.getIdEmpleado()) ;
             // Obtén la lista de préstamos
-            List<Prestamo> prestamos = ObtenerPrestamosPorEmpleado(UsuarioSesion.obtenerInstancia().empleado.getIdEmpleado());
+            List<Prestamo> prestamos = ObtenerPrestamosPorEmpleado(empleado.getIdEmpleado());
 
             tablaPrestamos.Rows.Clear();
             foreach (var prestamo in prestamos)
@@ -155,9 +158,9 @@ namespace Proyecto_Prestamos
                     DateTime fechaInicio = reader.GetDateTime(4); // fechaInicio
                     float valorCuota = (float)reader.GetDecimal(5); // valorCuota
                     string idSolicitud = reader.GetString(6); // idSolicitud
-                    string empleado = reader.GetString(7); // idEmpleado
-
-                    Prestamo prestamo = new Prestamo(empleado, idSolicitud, valorCuota, monto, tasaInteres, fechaInicio, periodoMeses);
+                    
+                    Prestamo prestamo = new Prestamo(idEmpleado, idSolicitud, valorCuota, monto, tasaInteres, fechaInicio, periodoMeses);
+                    prestamo.setid(idPrestamo);
                     prestamos.Add(prestamo);
                 }
 

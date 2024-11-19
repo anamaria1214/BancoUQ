@@ -39,7 +39,7 @@ namespace Proyecto_Prestamos
         {
             InitializeComponent();  // Inicializa los componentes del formulario
             this.cone = cone;
-            this.empDao = new EmpleadoDao(cone);
+            this.empDao = new EmpleadoDao();
 
         }
 

@@ -10,11 +10,10 @@ namespace Proyecto_Prestamos
     {
         private MainForm mfo;
         private FormEmpleado crudEmpleado;
-        private Conexion cone;
+        private Conexion cone= Conexion.Instancia;
 
-        public EmpleadoDao(Conexion cone)
+        public EmpleadoDao()
         {
-            this.cone = cone;
         }
         public EmpleadoDao(FormEmpleado crudEmpleado)
         {
@@ -103,11 +102,11 @@ namespace Proyecto_Prestamos
         public Empleado hallarEmpleadoPorCuenta(string usuario)
         {
             Empleado emp = null;
-            string consulta = "SELECT * FROM CuentaUsuario WHERE nombreUsuario = " + usuario;
+            string consulta = "SELECT * FROM Empleado WHERE idEmpleado = " + usuario;
 
             try
             {
-                SqlCommand cmd = new SqlCommand(consulta, mfo.getConecte().getCon());
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read()) // Solo necesitas leer una vez si esperas un único resultado
                 {

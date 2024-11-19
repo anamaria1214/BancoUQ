@@ -4,7 +4,7 @@ namespace Proyecto_Prestamos
 {
     public class Prestamo
     {
-        public string idPrestamo { get; set; }
+        public string idPrestamo;
         public string idEmpleado { get; set; }
         public string idSolicitud { get; set; }
         public float valorCuota { get; set; }
@@ -33,6 +33,15 @@ namespace Proyecto_Prestamos
             this.periodoMeses = periodoMeses;
         }
 
+        public void setid(string id)
+        {
+            this.idPrestamo = id;
+        }
+
+        public string getidPrestamo()
+        {
+            return this.idPrestamo;
+        }
 
 
     }
