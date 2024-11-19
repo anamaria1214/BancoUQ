@@ -33,16 +33,7 @@ namespace Proyecto_Prestamos
             this.periodoMeses = periodoMeses;
         }
 
-        public Prestamo(string idPrestamo, string idEmpleado, string idSolicitud, float valorCuota, decimal monto, decimal tasaInteres, DateTime fechaInicio, int periodoMeses)
-        {
-            this.idPrestamo = idPrestamo;
-            this.idEmpleado = idEmpleado;
-            this.idSolicitud = idSolicitud;
-            this.valorCuota = valorCuota;
-            this.monto = monto;
-            this.tasaInteres = tasaInteres;
-            this.fechaInicio = fechaInicio;
-            this.periodoMeses = periodoMeses;
-        }
+
+
     }
 }

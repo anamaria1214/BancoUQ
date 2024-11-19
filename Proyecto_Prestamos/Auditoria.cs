@@ -18,6 +18,7 @@ namespace Proyecto_Prestamos
             this.fechaIngreso = fechaIngreso;
             this.fechaSalida = fechaSalida;
         }
+
         public string IdCuenta
         {
             get { return idCuenta; }
@@ -41,6 +42,8 @@ namespace Proyecto_Prestamos
             get { return fechaSalida; }
             set { fechaSalida = value; }
         }
+    
+
 
     }
 }

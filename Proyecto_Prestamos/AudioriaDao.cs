@@ -11,13 +11,13 @@ namespace Proyecto_Prestamos
 {
     public class AuditoriaDao
     {
-        private Conexion cone = Conexion.Instancia;
+        private Conexion cone;
 
         public AuditoriaDao()
         {
-
+            this.cone= new Conexion();
         }
-        public List<Auditoria> ObtenerAuditorias()
+        public List<Auditoria> obtenerAuditorias()
         {
             List<Auditoria> auditorias = new List<Auditoria>();
             string consulta = "SELECT idAuditoria, nombreCuenta, fechaIngreso, fechaSalida FROM Auditoria";
@@ -50,6 +50,6 @@ namespace Proyecto_Prestamos
             return auditorias;
         }
     }
-    
+
 
 }

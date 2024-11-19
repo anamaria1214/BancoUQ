@@ -55,6 +55,7 @@ namespace Proyecto_Prestamos
             this.tasaInteres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPrestamos)).BeginInit();
@@ -101,6 +102,7 @@ namespace Proyecto_Prestamos
             this.button2.TabIndex = 2;
             this.button2.Text = "Reportar Pagos";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -162,11 +164,13 @@ namespace Proyecto_Prestamos
             this.periodoMeses,
             this.tasaInteres,
             this.fechaInicio,
-            this.valorCuota});
+            this.valorCuota,
+            this.idPrestamo});
             this.tablaPrestamos.Location = new System.Drawing.Point(222, 148);
             this.tablaPrestamos.Name = "tablaPrestamos";
-            this.tablaPrestamos.Size = new System.Drawing.Size(523, 212);
+            this.tablaPrestamos.Size = new System.Drawing.Size(543, 212);
             this.tablaPrestamos.TabIndex = 8;
+            this.tablaPrestamos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaPrestamos_CellContentClick);
             // 
             // montoPrestamo
             // 
@@ -193,11 +197,18 @@ namespace Proyecto_Prestamos
             this.valorCuota.HeaderText = "Cuota";
             this.valorCuota.Name = "valorCuota";
             // 
+            // idPrestamo
+            // 
+            this.idPrestamo.HeaderText = "Codigo";
+            this.idPrestamo.Name = "idPrestamo";
+            this.idPrestamo.ReadOnly = true;
+            this.idPrestamo.Visible = false;
+            // 
             // PrincipalEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 372);
+            this.ClientSize = new System.Drawing.Size(867, 372);
             this.Controls.Add(this.tablaPrestamos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -225,5 +236,6 @@ namespace Proyecto_Prestamos
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorCuota;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamo;
     }
 }

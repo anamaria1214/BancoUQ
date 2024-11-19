@@ -15,27 +15,29 @@ namespace Proyecto_Prestamos
         AuditoriaDao auditoriaDao;
         public VistaAuditoria()
         {
-            this.auditoriaDao= new AuditoriaDao();
+            auditoriaDao = new AuditoriaDao();  
             InitializeComponent();
-        }
-        private void pintarAuditoria()
-        {
-            List<Auditoria> auditorias= auditoriaDao.ObtenerAuditorias();
-            tablaAuditoria.Rows.Clear();
-            foreach (var auditoria in auditorias)
-            {
-                tablaAuditoria.Rows.Add(
-                    auditoria.IdCuenta,
-                    auditoria.NombreEmpleado,
-                    auditoria.FechaIngreso,
-                    auditoria.FechaSalida
-                    );
-            }
+            pintarAuditoria();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+    
+        private void pintarAuditoria()
+        {
+            List<Auditoria> auditorias= auditoriaDao.obtenerAuditorias();
+            tablaAuditoria.Rows.Clear();
+            foreach (var auditoria in auditorias)
+            {
+                tablaAuditoria.Rows.Add(
+                    UsuarioSesion.obtenerInstancia().empleado.getNombreEmpleado(),
+                    auditoria.FechaIngreso,
+                    auditoria.FechaSalida,
+                    auditoria.IdCuenta
+                    );
+            }
         }
     }
 }

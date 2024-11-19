@@ -14,20 +14,17 @@ namespace Proyecto_Prestamos
 		Conexion cone;
 		EmpleadoDao empleadoDao;
 		Empleado empleado;
-        PrestamoDao prestamoDao;
-        private string selecPrestamo = "0";
         UsuarioSesion usuario = UsuarioSesion.obtenerInstancia();
+        string selecSolicitud = "";
 
-		public PrincipalEmpleado(Conexion cone1, string nombreUusario)
+        public PrincipalEmpleado(Conexion cone1, string nombreUusario)
 		{
             this.cone = cone1;
             empleadoDao = new EmpleadoDao(cone1);
-            this.prestamoDao = new PrestamoDao();
 			this.empleado= empleadoDao.buscarEmpleado(nombreUusario);
+            LlenarDataGridView();
             InitializeComponent();
-            pintarPrestamos();
-            instanciarSingleton(nombreUusario);
-
+			instanciarSingleton(nombreUusario);
 			
 		}
 		void instanciarSingleton(string nombreUusario)
@@ -37,24 +34,6 @@ namespace Proyecto_Prestamos
                 usuario.establecerCuenta(nombreUusario);
                 usuario.establecerFechaInicio(DateTime.Now);
 
-        }
-
-        private void pintarPrestamos()
-        {
-            List<Prestamo> prestamos = prestamoDao.ObtenerPrestamosPorEmpleado(usuario.empleado.getIdEmpleado());
-            tablaPrestamos.Rows.Clear();
-            foreach (var prestamo in prestamos)
-            {
-                tablaPrestamos.Rows.Add(
-                    prestamo.monto,
-                    prestamo.periodoMeses,
-                    prestamo.tasaInteres,
-                    prestamo.fechaInicio.ToShortDateString(),
-                    prestamo.monto/ prestamo.periodoMeses,
-                    prestamo.idEmpleado,
-                    prestamo.idSolicitud
-                    );
-            }
         }
         void Label1Click(object sender, EventArgs e)
 		{
@@ -106,10 +85,20 @@ namespace Proyecto_Prestamos
         private void LlenarDataGridView()
         {
             // Obtén la lista de préstamos
-            //List<Prestamo> prestamos = ObtenerPrestamosPorEmpleado(UsuarioSesion.obtenerInstancia().empleado.getIdEmpleado());
+            List<Prestamo> prestamos = ObtenerPrestamosPorEmpleado(UsuarioSesion.obtenerInstancia().empleado.getIdEmpleado());
 
-            // Asigna la lista al DataGridView
-            //tablaPrestamos.DataSource = prestamos;
+            tablaPrestamos.Rows.Clear();
+            foreach (var prestamo in prestamos)
+            {
+                tablaPrestamos.Rows.Add(
+                    prestamo.monto,
+                    prestamo.periodoMeses,
+                    prestamo.tasaInteres,
+                    prestamo.fechaInicio.ToShortDateString(),
+                    prestamo.valorCuota,
+                    prestamo.idPrestamo
+                    );
+            }
         }
 
         public static string generarCadenaRandom(int longitud)
@@ -126,19 +115,65 @@ namespace Proyecto_Prestamos
             return new string(resultado);
         }
 
-        /*private List<Prestamo> ObtenerPrestamosPorEmpleado(string idEmpleado)
+        private void button2_Click(object sender, EventArgs e)
         {
-            string consulta= "SELECT * FROM Prestamo where id"
-        }*/
 
+        }
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow filaSeleccionada = tablaPrestamos.Rows[e.RowIndex];
 
-                selecPrestamo = filaSeleccionada.Cells[5].Value.ToString(); // Por índice
+                selecSolicitud = filaSeleccionada.Cells[5].Value.ToString(); // Por índice
             }
+        }
+
+        public List<Prestamo> ObtenerPrestamosPorEmpleado(string idEmpleado)
+        {
+            List<Prestamo> prestamos = new List<Prestamo>();
+            string consulta = @"
+                SELECT *
+                FROM Prestamo p
+                JOIN SolicitudPrestamo s ON p.idSolicitud = s.idSolicitud
+                WHERE s.idEmpleado = @idEmpleado";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(consulta, cone.getCon());
+                cmd.Parameters.AddWithValue("@idEmpleado", idEmpleado);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // Mapear los valores obtenidos al objeto Prestamo
+                    string idPrestamo = reader.GetString(0); // idPrestamo
+                    decimal monto = (decimal)reader.GetDecimal(1); // montoPedido
+                    int periodoMeses = reader.GetInt32(2); // periodoMeses
+                    decimal tasaInteres = (decimal)reader.GetDecimal(3); // tasaInteres
+                    DateTime fechaInicio = reader.GetDateTime(4); // fechaInicio
+                    float valorCuota = (float)reader.GetDecimal(5); // valorCuota
+                    string idSolicitud = reader.GetString(6); // idSolicitud
+                    string empleado = reader.GetString(7); // idEmpleado
+
+                    Prestamo prestamo = new Prestamo(empleado, idSolicitud, valorCuota, monto, tasaInteres, fechaInicio, periodoMeses);
+                    prestamos.Add(prestamo);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener préstamos: " + ex.Message, "Error");
+            }
+
+            return prestamos;
+        }
+
+        private void tablaPrestamos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
