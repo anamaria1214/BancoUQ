@@ -86,6 +86,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Rechazar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.rechazar);
             // 
             // button1
             // 
@@ -95,6 +96,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Aprobar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.aprobar);
             // 
             // label2
             // 
@@ -128,38 +130,46 @@
             this.idSolicitud});
             this.dataGridView1.Location = new System.Drawing.Point(205, 120);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(616, 150);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // montoSolicitud
             // 
             this.montoSolicitud.HeaderText = "Monto";
             this.montoSolicitud.Name = "montoSolicitud";
+            this.montoSolicitud.ReadOnly = true;
             // 
             // periodoMeses
             // 
             this.periodoMeses.HeaderText = "Periodo (Meses)";
             this.periodoMeses.Name = "periodoMeses";
+            this.periodoMeses.ReadOnly = true;
             // 
             // tasaInteres
             // 
             this.tasaInteres.HeaderText = "Tasa";
             this.tasaInteres.Name = "tasaInteres";
+            this.tasaInteres.ReadOnly = true;
             // 
             // fechaSolicitud
             // 
             this.fechaSolicitud.HeaderText = "Fecha solicitud";
             this.fechaSolicitud.Name = "fechaSolicitud";
+            this.fechaSolicitud.ReadOnly = true;
             // 
             // empleado
             // 
             this.empleado.HeaderText = "Empleado";
             this.empleado.Name = "empleado";
+            this.empleado.ReadOnly = true;
             // 
             // idSolicitud
             // 
             this.idSolicitud.HeaderText = "ID solicitud";
             this.idSolicitud.Name = "idSolicitud";
+            this.idSolicitud.ReadOnly = true;
             // 
             // PrincipalTesorero
             // 

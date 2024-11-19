@@ -15,11 +15,10 @@ namespace Proyecto_Prestamos
     {
         Solicitud solicitud;
         SolicitudDao solicitudDao;
-        Conexion cone;
-        public CRUDSolicitud(Conexion cone)
+        Conexion cone = Conexion.Instancia;
+        public CRUDSolicitud()
         {
-            this.cone = cone;
-            this.solicitudDao = new SolicitudDao(cone);
+            this.solicitudDao = new SolicitudDao();
             InitializeComponent();
             
         }
@@ -38,8 +37,7 @@ namespace Proyecto_Prestamos
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void crearPrestamo()
         {
             decimal monto = decimal.Parse(montoSolicitud.Text);
             int periodo = int.Parse(periodoMeses.SelectedItem.ToString());
@@ -62,8 +60,12 @@ namespace Proyecto_Prestamos
                     tasa = (decimal)8.6;
                     break;
             }
-            Solicitud solicitud = new Solicitud("1", UsuarioSesion.obtenerInstancia().empleado.getIdEmpleado(), monto, periodo, DateTime.Now, tasa);  
+            Solicitud solicitud = new Solicitud("1", UsuarioSesion.obtenerInstancia().empleado.getIdEmpleado(), monto, periodo, DateTime.Now, tasa);
             solicitudDao.agregarSolicitud(solicitud);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            crearPrestamo();
         }
     }
 }
