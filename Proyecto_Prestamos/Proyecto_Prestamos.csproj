@@ -59,7 +59,6 @@
   <ItemGroup>
 <<<<<<< HEAD
     <Compile Include="Auditoria.cs" />
-    <Compile Include="AuditoriaDao.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="CorreoNotificacion.cs" />
     <Compile Include="CRUDSolicitud.cs">
@@ -106,7 +105,10 @@
     <Compile Include="Nivel.cs" />
     <Compile Include="Prestamo.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="PrestamoDao.cs" />
+=======
+>>>>>>> parent of d6aa535 (Interfaz de auditoria funcionando)
     <Compile Include="PrincipalAdmin.cs">
 =======
     <Compile Include="PrincipalAdministrador.cs">
